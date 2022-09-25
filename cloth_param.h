@@ -1,8 +1,8 @@
 #ifndef CLOTH_PARAM_H
 #define CLOTH_PARAM_H
 // Default values
-int n = 100, delta = 2, maxiter = 40;
-double sep = 0.25, mass = 1.0, fcon = 40;
+int n = 40, delta = 2, maxiter = 400;
+double sep = 0.25, mass = 1.0, fcon = 20;
 double grav = 9.81, dt = 0.01;
 double xball = 0.0, yball = 0.0, zball = 0.0, rball = 3.0, offset = 0.0;
 
