@@ -111,6 +111,9 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
         x[j * n + i] = xball + xdiff * rball / vmag;
         y[j * n + i] = yball + ydiff * rball / vmag;
         z[j * n + i] = zball + zdiff * rball / vmag;
+        vx[j*n+i]=0.0;
+        vy[j*n+i]=0.0;
+        vz[j*n+i]=0.0;
       }
     }
   }
