@@ -1,6 +1,6 @@
 # Assignment 2 COMP3320 - Cloth Simulation
 
-## Worth 20%, due by []()
+## Worth 20%, due by [5PM Friday 28th October, 2022](https://www.timeanddate.com/countdown/generic?iso=20221028T17&p0=57&msg=COMP3320%2FCOMP6464+2022+Assignment+2+Due&ud=1&font=cursive)
 
 ***Please read this document in full before attempting the assignment to ensure you are fully aware of the task requirements***
 
