@@ -20,6 +20,7 @@ class ball(object):
         )
 
 
+
 def create_cloth(N, ballsize, nodes):
     #   create nodes in cloth
     for nx in range(N):
@@ -191,6 +192,13 @@ while iter < maxit:
         if dist.mag < myball.radius:
             fvector = dist / dist.mag * myball.radius
             node.pos = vector(myball.x, myball.y, myball.z) + fvector
+            
+            #node.velocity = vector(0,0,0);
+
+            # eliminate velocity normal to ball surface.
+            surfaceNormal = (vector(myball.x, myball.y, myball.z) - node.pos)
+            eliminated_velocity = node.velocity.proj(surfaceNormal)
+            node.velocity = node.velocity - eliminated_velocity
 
     if iter % update == 0:
         #   update the view if necessary

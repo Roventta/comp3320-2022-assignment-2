@@ -1,4 +1,6 @@
 #include "./cloth_code.h"
+#include "./SoAVectorLib.cpp"
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -80,6 +82,7 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
   int i, j;
   double xdiff, ydiff, zdiff, vmag, damp;
 
+
   // update position as per MD simulation
   for (i = 0; i < n; i++) {
     for (j = 0; j < n; j++) {
@@ -111,9 +114,14 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
         x[j * n + i] = xball + xdiff * rball / vmag;
         y[j * n + i] = yball + ydiff * rball / vmag;
         z[j * n + i] = zball + zdiff * rball / vmag;
-        vx[j*n+i]=0.0;
-        vy[j*n+i]=0.0;
-        vz[j*n+i]=0.0;
+        
+	//get the normal of the ball contacting surface
+	struct singleVector surfaceNormal = vectorSub(xball, yball, zball, x[j*n+i], y[j*n+i], z[j*n+i]);
+	struct singleVector eliminated_velocity = vectorProj(vx[j*n+i], vy[j*n+i], vz[j*n+i], surfaceNormal.x, surfaceNormal.y, surfaceNormal.z);
+	struct singleVector newVelocity = vectorSub(vx[j*n+i], vy[j*n+i], vz[j*n+i],eliminated_velocity.x, eliminated_velocity.y, eliminated_velocity.z);
+	//friction
+	newVelocity = vectorScale(newVelocity.x, newVelocity.y, newVelocity.z, 0.1);
+	loadSingle(vx, vy, vz, j*n+i , newVelocity);
       }
     }
   }
