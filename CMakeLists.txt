@@ -56,6 +56,12 @@ add_executable(
   kernel_main.cpp
   cloth_code.cpp)
 
+add_executable(
+	origin_prof
+	kernel_main.cpp
+	cloth_code_original.cpp
+	)
+
 if(OpenMP_FOUND)
   target_link_libraries(kernel_main m OpenMP::OpenMP_CXX)
   target_link_libraries(opengl_main m ${OPENGL_LIBRARIES} ${GLUT_LIBRARY}
@@ -64,3 +70,5 @@ else()
   target_link_libraries(kernel_main m)
   target_link_libraries(opengl_main m ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
 endif()
+
+target_compile_options(origin_prof PRIVATE -gp)

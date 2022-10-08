@@ -84,28 +84,28 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
 
 
   // update position as per MD simulation
-  for (j = 0; j < n; j++) {
-    for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
       x[j * n + i] += dt * (vx[j * n + i] + dt * fx[j * n + i] * 0.5 / mass);
       oldfx[j * n + i] = fx[j * n + i];
     }
   }
-  for (j = 0; j < n; j++) {
-    for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
       y[j * n + i] += dt * (vy[j * n + i] + dt * fy[j * n + i] * 0.5 / mass);
       oldfy[j * n + i] = fy[j * n + i];
     }
   }
-  for (j = 0; j < n; j++) {
-    for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
       z[j * n + i] += dt * (vz[j * n + i] + dt * fz[j * n + i] * 0.5 / mass);
       oldfz[j * n + i] = fz[j * n + i];
     }
   }
 
   //	apply constraints - push cloth outside of ball
-  for (j = 0; j < n; j++) {
-    for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
       xdiff = x[j * n + i] - xball;
       ydiff = y[j * n + i] - yball;
       zdiff = z[j * n + i] - zball;
@@ -130,8 +130,8 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
 
   // Add a damping factor to eventually set velocity to zero
   damp = 0.995;
-  for (j = 0; j < n; j++) {
-    for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
       vx[j * n + i] = (vx[j * n + i] +
                        dt * (fx[j * n + i] + oldfx[j * n + i]) * 0.5 / mass) *
                       damp;
@@ -144,8 +144,8 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
     }
   }
   *ke = 0.0;
-  for (j = 0; j < n; j++) {
-    for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
       *ke += vx[j * n + i] * vx[j * n + i] + vy[j * n + i] * vy[j * n + i] +
              vz[j * n + i] * vz[j * n + i];
     }
@@ -162,14 +162,14 @@ double eval_pef(int n, int delta, double mass, double grav, double sep,
 
   pe = 0.0;
   // loop over particles
-  for (nx = 0; nx < n; nx++) {
-    for (ny = 0; ny < n; ny++) {
+  for (ny = 0; ny < n; ny++) {
+    for (nx = 0; nx < n; nx++) {
       fx[nx * n + ny] = 0.0;
       fy[nx * n + ny] = 0.0;
       fz[nx * n + ny] = -mass * grav;
       // loop over displacements
-      for (dx = MAX(nx - delta, 0); dx < MIN(nx + delta + 1, n); dx++) {
-        for (dy = MAX(ny - delta, 0); dy < MIN(ny + delta + 1, n); dy++) {
+      for (dy = MAX(ny - delta, 0); dy < MIN(ny + delta + 1, n); dy++) {
+        for (dx = MAX(nx - delta, 0); dx < MIN(nx + delta + 1, n); dx++) {
           // exclude self interaction
           if (nx != dx || ny != dy) {
             // compute reference distance
