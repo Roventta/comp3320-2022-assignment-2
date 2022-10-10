@@ -56,11 +56,6 @@ add_executable(
   kernel_main.cpp
   cloth_code.cpp)
 
-add_executable(
-	origin_prof
-	kernel_main.cpp
-	cloth_code_original.cpp
-	)
 
 if(OpenMP_FOUND)
   target_link_libraries(kernel_main m OpenMP::OpenMP_CXX)
