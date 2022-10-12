@@ -56,6 +56,19 @@ add_executable(
   kernel_main.cpp
   cloth_code.cpp)
 
+add_executable(
+	kernel_opt
+	kernel_main.cpp
+	cloth_code_trival.cpp
+	)
+
+add_executable(
+	kernel_sse
+	kernel_main.cpp
+	cloth_code_sse.cpp
+	)
+
+set_target_properties(kernel_sse PROPERTIES COMPILE_FLAGS "-mavx2")
 
 if(OpenMP_FOUND)
   target_link_libraries(kernel_main m OpenMP::OpenMP_CXX)
@@ -66,4 +79,3 @@ else()
   target_link_libraries(opengl_main m ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
 endif()
 
-target_compile_options(origin_prof PRIVATE -gp)
