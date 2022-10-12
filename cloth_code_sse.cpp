@@ -1,5 +1,6 @@
 #include "./cloth_code.h"
 #include "./SoAVectorLib.cpp"
+#include "./SIMDlib.cpp"
 
 #include <math.h>
 #include <stdio.h>
@@ -81,15 +82,39 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
               double *pe, double *ke, double *te) {
   int i, j;
   double xdiff, ydiff, zdiff, vmag, damp;
-
+  __m256d dtS_half_mass = _mm256_setr_pd(dt*dt*0.5/mass,dt*dt*0.5/mass,dt*dt*0.5/mass,dt*dt*0.5/mass);
+  __m256d dtF = _mm256_setr_pd(dt, dt, dt, dt); 
 
   // update position as per MD simulation
+  /*
   for (j = 0; j < n; j++) {
     for (i = 0; i < n; i++) {
       x[j * n + i] += dt * (vx[j * n + i] + dt * fx[j * n + i] * 0.5 / mass);
       oldfx[j * n + i] = fx[j * n + i];
     }
   }
+  */
+  for(j=0; j<n; j++) {
+  	for(i=0; i<n-n%4; i=i+4){
+	__m256d fxF = loadFourD(&fx[j*n+i]);
+	__m256d fxF_clone = fxF;
+	__m256d vxF = loadFourD(&vx[j*n+i]);
+	__m256d xF = loadFourD(&x[j*n+i]);
+
+	vxF = mulFourD(vxF, dtF);
+	fxF = mulFourD(fxF, dtS_half_mass);
+	xF = addFourD(xF, vxF);
+	xF = addFourD(xF, fxF);
+
+	storeFourD(xF, &x[j*n+i]);
+	storeFourD(fxF_clone, &oldfx[j*n+i]);
+	}
+       	for (i = n-n%4; i < n; i++) {
+		x[j * n + i] += dt * (vx[j * n + i] + dt * fx[j * n + i] * 0.5 / mass);
+		oldfx[j * n + i] = fx[j * n + i];
+    	}
+  }
+
   for (j = 0; j < n; j++) {
     for (i = 0; i < n; i++) {
       y[j * n + i] += dt * (vy[j * n + i] + dt * fy[j * n + i] * 0.5 / mass);
