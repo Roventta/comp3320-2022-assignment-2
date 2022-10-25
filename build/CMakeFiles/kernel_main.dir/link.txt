@@ -1,0 +1,1 @@
+/opt/nci/bin/c++  -g   -fpic -Wall -Wextra -Wno-deprecated-declarations -Wpedantic -O2 -g -DNDEBUG CMakeFiles/kernel_main.dir/kernel_main.cpp.o CMakeFiles/kernel_main.dir/cloth_code.cpp.o -o kernel_main  -lm /half-root/usr/lib/gcc/x86_64-redhat-linux/8/libgomp.so /half-root/usr/lib64/libpthread.so 

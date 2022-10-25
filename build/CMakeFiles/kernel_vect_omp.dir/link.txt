@@ -1,0 +1,1 @@
+/opt/nci/bin/c++  -g   -fpic -Wall -Wextra -Wno-deprecated-declarations -Wpedantic -O2 -g -DNDEBUG CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.o -o kernel_vect_omp 

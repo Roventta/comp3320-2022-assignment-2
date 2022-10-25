@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp"
+           line_no="96"
+           routine="main"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="1.387000E+01"
+           trip_counts=""
+           func_instance="2"
+           priority="0"/>
+  <hotspot filename="/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_mp.cpp"
+           line_no="164"
+           routine="eval_pef"
+           is_vectorized="0"
+           self_time="1.299955E-01"
+           total_time="1.231032E+01"
+           trip_counts=""
+           func_instance="7"
+           priority="0"/>
+  <hotspot filename="/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_mp.cpp"
+           line_no="163"
+           routine="eval_pef"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="1.231032E+01"
+           trip_counts=""
+           func_instance="8"
+           priority="0"/>
+  <hotspot filename="/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_mp.cpp"
+           line_no="200"
+           routine="eval_pef"
+           is_vectorized="0"
+           self_time="7.960071E+00"
+           total_time="7.960071E+00"
+           trip_counts=""
+           func_instance="5"
+           priority="0"/>
+  <hotspot filename="/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_mp.cpp"
+           line_no="179"
+           routine="eval_pef"
+           is_vectorized="0"
+           self_time="4.999880E-02"
+           total_time="2.000116E+00"
+           trip_counts=""
+           func_instance="10"
+           priority="0"/>
+</IntelParallelAdvisorSummary >

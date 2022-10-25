@@ -1,0 +1,8 @@
+/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles/rebuild_cache.dir
+/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles/kernel_main.dir
+/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles/kernel_vect_omp.dir
+/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles/opengl_main.dir
+/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles/papi_omp.dir
+/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles/kernel_opt.dir
+/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles/edit_cache.dir
+/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles/kernel_sse.dir
