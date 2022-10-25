@@ -68,7 +68,15 @@ add_executable(
 	cloth_code_sse.cpp
 	)
 
-set_target_properties(kernel_sse PROPERTIES COMPILE_FLAGS "-mavx2")
+add_executable(
+	kernel_vect_omp
+	kernel_main.cpp
+	cloth_code_mp.cpp
+	)
+
+
+set_target_properties(kernel_sse PROPERTIES COMPILE_FLAGS "-mavx2 -march=native")
+set_target_properties(kernel_vect_omp PROPERTIES COMPILE_FLAGS "-fopenmp")
 
 if(OpenMP_FOUND)
   target_link_libraries(kernel_main m OpenMP::OpenMP_CXX)

@@ -10,12 +10,32 @@ __m256d addFourD(__m256d x, __m256d y) {
 	 return _mm256_add_pd(x,y);
 }
 
+__m256d subFourD(__m256d x, __m256d y) {
+	return _mm256_sub_pd(x,y);
+}
+
 __m256d mulFourD(__m256d x, __m256d y) {
 	return _mm256_mul_pd(x,y);
 }
 
 void storeFourD(__m256d sourc, double* dest) {
-	_mm256_store_pd(dest, sourc);
+	_mm256_storeu_pd(dest, sourc);
+}
+
+__m256d compareFourD(__m256d A, __m256d B) {
+	return _mm256_cmp_pd(A, B, 0);
+}
+
+__m256d dotFourD(__m256d Ax, __m256d Ay, __m256d Az, __m256d Bx, __m256d By, __m256d Bz) {
+	__m256d AdotBx = mulFourD(Ax, Bx);
+	__m256d AdotBy = mulFourD(Ay, By);
+	__m256d AdotBz = mulFourD(Az, Bz);
+
+	return addFourD(addFourD(AdotBx, AdotBy),AdotBz);
+}
+
+void mskStoreFourD(__mmask8 k, __m256d a,void* dest) {
+	_mm256_mask_compressstoreu_pd(dest, k, a);
 }
 
 /*

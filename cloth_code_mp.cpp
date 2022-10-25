@@ -5,6 +5,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <omp.h>
 
 void initMatrix(int n, double UNUSED(mass), double UNUSED(fcon),
                 int UNUSED(delta), double UNUSED(grav), double sep,
@@ -86,6 +87,7 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
 
   // update position as per MD simulation
   for (j = 0; j < n; j++) {
+#pragma omp simd
     for (i = 0; i < n; i++) {
       x[j * n + i] += dt * (vx[j * n + i] + dt * fx[j * n + i] * 0.5 / mass);
       oldfx[j * n + i] = fx[j * n + i];
@@ -124,8 +126,11 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
   // Add a damping factor to eventually set velocity to zero
   damp = 0.995;
   *ke = 0.0;
+  double KE = 0.0;
+	#pragma omp simd
   for (j = 0; j < n; j++) {
-    for (i = 0; i < n; i++) {
+	{  
+	  for (int i = 0; i < n; i++) {
       vx[j * n + i] = (vx[j * n + i] +
                        dt * (fx[j * n + i] + oldfx[j * n + i]) * 0.5 / mass) *
                       damp;
@@ -135,11 +140,12 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
       vz[j * n + i] = (vz[j * n + i] +
                        dt * (fz[j * n + i] + oldfz[j * n + i]) * 0.5 / mass) *
                       damp;
-      *ke += vx[j * n + i] * vx[j * n + i] + vy[j * n + i] * vy[j * n + i] +
-             vz[j * n + i] * vz[j * n + i];
+      
+      KE += vx[j * n + i] * vx[j * n + i] + vy[j * n + i] * vy[j * n + i] + vz[j * n + i] * vz[j * n + i];
     }
+	}
   }
-  *ke = *ke / 2.0;
+  *ke = KE / 2.0;
   *te = *pe + *ke;
 }
 
@@ -155,35 +161,54 @@ double eval_pef(int n, int delta, double mass, double grav, double sep,
   pe = 0.0;
   // loop over particles
   for (nx = 0; nx < n; nx++) {
+    #pragma omp simd reduction(+: pe)
     for (ny = 0; ny < n; ny++) {
       fx[nx * n + ny] = 0.0;
       fy[nx * n + ny] = 0.0;
       fz[nx * n + ny] = -mass * grav;
       // loop over displacements
-	int adjacentIndex = 0;
-	for (dx = MAX(nx - delta, 0); dx < MIN(nx + delta + 1, n); dx++) {
-        	for (dy = MAX(ny - delta, 0); dy < MIN(ny + delta + 1, n); dy++) {
-		       	if (nx != dx || ny != dy) {
-				adjacents[adjacentIndex] = dx*n+dy;
-            			rlen[adjacentIndex] = sqrt((double)((nx - dx) * (nx - dx) + (ny - dy) * (ny - dy))) * sep;
-				adjacentIndex++;
-			}
+      int adjacentIndex = 0;
+	for(dx = MAX(nx-delta, 0); dx< nx; dx++) {
+		for(dy = MAX(ny-delta, 0); dy<MIN(ny+delta+1, n); dy++){
+			adjacents[adjacentIndex] = dx*n+dy;
+			rlen[adjacentIndex] = sqrt((double)((nx-dx)*(nx-dx)+(ny-dy)*(ny-dy)))*sep;
+			adjacentIndex++;
+		}
+	} 
+
+	for(dx = nx+1; dx< MIN(nx+delta+1, n); dx++) {
+		for(dy = MAX(ny-delta, 0); dy<MIN(ny+delta+1, n); dy++){
+			adjacents[adjacentIndex] = dx*n+dy;
+			rlen[adjacentIndex] = sqrt((double)((nx-dx)*(nx-dx)+(ny-dy)*(ny-dy)))*sep;
+			adjacentIndex++;
 		}
 	}
-	for (int i = 0; i<adjacentIndex; i++) {
-	    // compute reference distance
-            // compute actual distance
-            xdiff = x[adjacents[i]] - x[nx * n + ny];
-            ydiff = y[adjacents[i]] - y[nx * n + ny];
-            zdiff = z[adjacents[i]] - z[nx * n + ny];
-            vmag = sqrt(xdiff * xdiff + ydiff * ydiff + zdiff * zdiff);
-            // potential energy and force
-            pe += fcon * (vmag - rlen[i]) * (vmag - rlen[i]);
-            fx[nx * n + ny] += fcon * xdiff * (vmag - rlen[i]) / vmag;
-            fy[nx * n + ny] += fcon * ydiff * (vmag - rlen[i]) / vmag;
-            fz[nx * n + ny] += fcon * zdiff * (vmag - rlen[i]) / vmag;
- 
+	
+	dx = nx;
+
+	for(dy = MAX(ny-delta,0); dy<ny; dy++){
+			adjacents[adjacentIndex] = dx*n+dy;
+			rlen[adjacentIndex] = sqrt((double)((nx-dx)*(nx-dx)+(ny-dy)*(ny-dy)))*sep;
+			adjacentIndex++;
 	}
+	for(dy = ny+1; dy<MIN(ny+delta+1, n); dy++){
+			adjacents[adjacentIndex] = dx*n+dy;
+			rlen[adjacentIndex] = sqrt((double)((nx-dx)*(nx-dx)+(ny-dy)*(ny-dy)))*sep;
+			adjacentIndex++;
+	}
+
+	for(int i=0; i<adjacentIndex; i++){
+		xdiff = x[adjacents[i]] - x[nx * n + ny];
+		ydiff = y[adjacents[i]] - y[nx * n + ny];
+	 	zdiff = z[adjacents[i]] - z[nx * n + ny];
+		vmag = sqrt(xdiff * xdiff + ydiff * ydiff + zdiff * zdiff);
+		// potential energy and force
+   		pe += fcon * (vmag - rlen[i]) * (vmag - rlen[i]);
+		fx[nx * n + ny] += fcon * xdiff * (vmag - rlen[i]) / vmag;
+		fy[nx * n + ny] += fcon * ydiff * (vmag - rlen[i]) / vmag;
+		fz[nx * n + ny] += fcon * zdiff * (vmag - rlen[i]) / vmag;
+	}
+
     }
   }
   return 0.5 * pe;
