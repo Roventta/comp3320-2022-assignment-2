@@ -161,15 +161,38 @@ double eval_pef(int n, int delta, double mass, double grav, double sep,
       fz[nx * n + ny] = -mass * grav;
       // loop over displacements
 	int adjacentIndex = 0;
-	for (dx = MAX(nx - delta, 0); dx < MIN(nx + delta + 1, n); dx++) {
-        	for (dy = MAX(ny - delta, 0); dy < MIN(ny + delta + 1, n); dy++) {
-		       	if (nx != dx || ny != dy) {
-				adjacents[adjacentIndex] = dx*n+dy;
-            			rlen[adjacentIndex] = sqrt((double)((nx - dx) * (nx - dx) + (ny - dy) * (ny - dy))) * sep;
-				adjacentIndex++;
-			}
+	for(dx = MAX(nx-delta, 0); dx< nx; dx++) {
+		for(dy = MAX(ny-delta, 0); dy<MIN(ny+delta+1, n); dy++){
+			adjacents[adjacentIndex] = dx*n+dy;
+			rlen[adjacentIndex] = sqrt((double)((nx-dx)*(nx-dx)+(ny-dy)*(ny-dy)))*sep;
+			adjacentIndex++;
+		}
+	} 
+
+	for(dx = nx+1; dx< MIN(nx+delta+1, n); dx++) {
+		for(dy = MAX(ny-delta, 0); dy<MIN(ny+delta+1, n); dy++){
+			adjacents[adjacentIndex] = dx*n+dy;
+			rlen[adjacentIndex] = sqrt((double)((nx-dx)*(nx-dx)+(ny-dy)*(ny-dy)))*sep;
+			adjacentIndex++;
 		}
 	}
+	
+	dx = nx;
+
+	for(dy = MAX(ny-delta,0); dy<ny; dy++){
+			adjacents[adjacentIndex] = dx*n+dy;
+			rlen[adjacentIndex] = sqrt((double)((nx-dx)*(nx-dx)+(ny-dy)*(ny-dy)))*sep;
+			adjacentIndex++;
+	}
+	for(dy = ny+1; dy<MIN(ny+delta+1, n); dy++){
+			adjacents[adjacentIndex] = dx*n+dy;
+			rlen[adjacentIndex] = sqrt((double)((nx-dx)*(nx-dx)+(ny-dy)*(ny-dy)))*sep;
+			adjacentIndex++;
+	}
+
+
+	
+	
 	for (int i = 0; i<adjacentIndex; i++) {
 	    // compute reference distance
             // compute actual distance
