@@ -1,1 +1,0 @@
-/opt/nci/bin/c++  -g   -fpic -Wall -Wextra -Wno-deprecated-declarations -Wpedantic -O2 -g -DNDEBUG CMakeFiles/papi_omp.dir/test_build/papi_measurement.cpp.o CMakeFiles/papi_omp.dir/cloth_code_mp.cpp.o -o papi_omp 

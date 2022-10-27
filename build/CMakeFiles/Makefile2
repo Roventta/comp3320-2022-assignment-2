@@ -65,9 +65,9 @@ CMAKE_BINARY_DIR = /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build
 # The main recursive "all" target.
 all: CMakeFiles/kernel_main.dir/all
 all: CMakeFiles/kernel_vect_omp.dir/all
-all: CMakeFiles/opengl_main.dir/all
-all: CMakeFiles/papi_omp.dir/all
 all: CMakeFiles/kernel_opt.dir/all
+all: CMakeFiles/opengl_main.dir/all
+all: CMakeFiles/kernel_omp.dir/all
 all: CMakeFiles/kernel_sse.dir/all
 .PHONY : all
 
@@ -78,9 +78,9 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/kernel_main.dir/clean
 clean: CMakeFiles/kernel_vect_omp.dir/clean
-clean: CMakeFiles/opengl_main.dir/clean
-clean: CMakeFiles/papi_omp.dir/clean
 clean: CMakeFiles/kernel_opt.dir/clean
+clean: CMakeFiles/opengl_main.dir/clean
+clean: CMakeFiles/kernel_omp.dir/clean
 clean: CMakeFiles/kernel_sse.dir/clean
 .PHONY : clean
 
@@ -117,7 +117,7 @@ CMakeFiles/kernel_main.dir/clean:
 CMakeFiles/kernel_vect_omp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=10,11,12 "Built target kernel_vect_omp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=13,14,15 "Built target kernel_vect_omp"
 .PHONY : CMakeFiles/kernel_vect_omp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -137,65 +137,13 @@ CMakeFiles/kernel_vect_omp.dir/clean:
 .PHONY : CMakeFiles/kernel_vect_omp.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/opengl_main.dir
-
-# All Build rule for target.
-CMakeFiles/opengl_main.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_main.dir/build.make CMakeFiles/opengl_main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_main.dir/build.make CMakeFiles/opengl_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=13,14,15 "Built target opengl_main"
-.PHONY : CMakeFiles/opengl_main.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/opengl_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/opengl_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles 0
-.PHONY : CMakeFiles/opengl_main.dir/rule
-
-# Convenience name for target.
-opengl_main: CMakeFiles/opengl_main.dir/rule
-.PHONY : opengl_main
-
-# clean rule for target.
-CMakeFiles/opengl_main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_main.dir/build.make CMakeFiles/opengl_main.dir/clean
-.PHONY : CMakeFiles/opengl_main.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/papi_omp.dir
-
-# All Build rule for target.
-CMakeFiles/papi_omp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/papi_omp.dir/build.make CMakeFiles/papi_omp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/papi_omp.dir/build.make CMakeFiles/papi_omp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=16,17,18 "Built target papi_omp"
-.PHONY : CMakeFiles/papi_omp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/papi_omp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/papi_omp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles 0
-.PHONY : CMakeFiles/papi_omp.dir/rule
-
-# Convenience name for target.
-papi_omp: CMakeFiles/papi_omp.dir/rule
-.PHONY : papi_omp
-
-# clean rule for target.
-CMakeFiles/papi_omp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/papi_omp.dir/build.make CMakeFiles/papi_omp.dir/clean
-.PHONY : CMakeFiles/papi_omp.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/kernel_opt.dir
 
 # All Build rule for target.
 CMakeFiles/kernel_opt.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_opt.dir/build.make CMakeFiles/kernel_opt.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_opt.dir/build.make CMakeFiles/kernel_opt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=4,5,6 "Built target kernel_opt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=7,8,9 "Built target kernel_opt"
 .PHONY : CMakeFiles/kernel_opt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -215,13 +163,65 @@ CMakeFiles/kernel_opt.dir/clean:
 .PHONY : CMakeFiles/kernel_opt.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/opengl_main.dir
+
+# All Build rule for target.
+CMakeFiles/opengl_main.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_main.dir/build.make CMakeFiles/opengl_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_main.dir/build.make CMakeFiles/opengl_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=16,17,18 "Built target opengl_main"
+.PHONY : CMakeFiles/opengl_main.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/opengl_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/opengl_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles 0
+.PHONY : CMakeFiles/opengl_main.dir/rule
+
+# Convenience name for target.
+opengl_main: CMakeFiles/opengl_main.dir/rule
+.PHONY : opengl_main
+
+# clean rule for target.
+CMakeFiles/opengl_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_main.dir/build.make CMakeFiles/opengl_main.dir/clean
+.PHONY : CMakeFiles/opengl_main.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/kernel_omp.dir
+
+# All Build rule for target.
+CMakeFiles/kernel_omp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=4,5,6 "Built target kernel_omp"
+.PHONY : CMakeFiles/kernel_omp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/kernel_omp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/kernel_omp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles 0
+.PHONY : CMakeFiles/kernel_omp.dir/rule
+
+# Convenience name for target.
+kernel_omp: CMakeFiles/kernel_omp.dir/rule
+.PHONY : kernel_omp
+
+# clean rule for target.
+CMakeFiles/kernel_omp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/clean
+.PHONY : CMakeFiles/kernel_omp.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/kernel_sse.dir
 
 # All Build rule for target.
 CMakeFiles/kernel_sse.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_sse.dir/build.make CMakeFiles/kernel_sse.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_sse.dir/build.make CMakeFiles/kernel_sse.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=7,8,9 "Built target kernel_sse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=10,11,12 "Built target kernel_sse"
 .PHONY : CMakeFiles/kernel_sse.dir/all
 
 # Build rule for subdir invocation for target.

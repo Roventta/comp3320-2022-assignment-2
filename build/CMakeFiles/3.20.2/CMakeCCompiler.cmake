@@ -1,7 +1,7 @@
-set(CMAKE_C_COMPILER "/opt/nci/bin/cc")
+set(CMAKE_C_COMPILER "/apps/intel-ct/wrapper/icc")
 set(CMAKE_C_COMPILER_ARG1 "")
-set(CMAKE_C_COMPILER_ID "GNU")
-set(CMAKE_C_COMPILER_VERSION "8.5.0")
+set(CMAKE_C_COMPILER_ID "Intel")
+set(CMAKE_C_COMPILER_VERSION "2021.6.0.20220226")
 set(CMAKE_C_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_C_COMPILER_WRAPPER "")
 set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "11")
@@ -11,20 +11,20 @@ set(CMAKE_C99_COMPILE_FEATURES "c_std_99;c_restrict;c_variadic_macros")
 set(CMAKE_C11_COMPILE_FEATURES "c_std_11;c_static_assert")
 
 set(CMAKE_C_PLATFORM_ID "Linux")
-set(CMAKE_C_SIMULATE_ID "")
+set(CMAKE_C_SIMULATE_ID "GNU")
 set(CMAKE_C_COMPILER_FRONTEND_VARIANT "")
-set(CMAKE_C_SIMULATE_VERSION "")
+set(CMAKE_C_SIMULATE_VERSION "8.5.0")
 
 
 
 
 set(CMAKE_AR "/bin/ar")
-set(CMAKE_C_COMPILER_AR "/bin/gcc-ar")
+set(CMAKE_C_COMPILER_AR "")
 set(CMAKE_RANLIB "/bin/ranlib")
-set(CMAKE_C_COMPILER_RANLIB "/bin/gcc-ranlib")
+set(CMAKE_C_COMPILER_RANLIB "")
 set(CMAKE_LINKER "/opt/nci/bin/ld")
 set(CMAKE_MT "")
-set(CMAKE_COMPILER_IS_GNUCC 1)
+set(CMAKE_COMPILER_IS_GNUCC )
 set(CMAKE_C_COMPILER_LOADED 1)
 set(CMAKE_C_COMPILER_WORKS TRUE)
 set(CMAKE_C_ABI_COMPILED TRUE)
@@ -72,7 +72,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/half-root/usr/lib/gcc/x86_64-redhat-linux/8/include;/usr/local/include;/usr/include")
-set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/half-root/usr/lib/gcc/x86_64-redhat-linux/8;/half-root/usr/lib/gcc;/half-root/usr/lib64;/lib64;/usr/lib64;/half-root/usr/lib")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/apps/intel-ct/2021.6.0/compiler/linux/include;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/include/intel64;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/include/icc;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/include;/usr/local/include;/half-root/usr/lib/gcc/x86_64-redhat-linux/8/include;/half-root/usr/include;/usr/include")
+set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "imf;svml;irng;m;ipgo;decimal;cilkrts;stdc++;gcc;gcc_s;irc;svml;c;gcc;gcc_s;irc_s;dl;c")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin;/apps/intel-ct/2021.6.0/compiler/linux/lib/x64;/apps/intel-ct/2021.6.0/compiler/linux/lib;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/lib/intel64_lin;/half-root/usr/lib/gcc/x86_64-redhat-linux/8;/half-root/usr/lib/gcc;/half-root/usr/lib64;/lib64;/usr/lib64;/half-root/usr/lib;/lib;/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

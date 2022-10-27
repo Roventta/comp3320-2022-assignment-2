@@ -73,29 +73,29 @@ CMakeFiles/kernel_sse.dir/kernel_main.cpp.o: CMakeFiles/kernel_sse.dir/flags.mak
 CMakeFiles/kernel_sse.dir/kernel_main.cpp.o: ../kernel_main.cpp
 CMakeFiles/kernel_sse.dir/kernel_main.cpp.o: CMakeFiles/kernel_sse.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/kernel_sse.dir/kernel_main.cpp.o"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kernel_sse.dir/kernel_main.cpp.o -MF CMakeFiles/kernel_sse.dir/kernel_main.cpp.o.d -o CMakeFiles/kernel_sse.dir/kernel_main.cpp.o -c /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kernel_sse.dir/kernel_main.cpp.o -MF CMakeFiles/kernel_sse.dir/kernel_main.cpp.o.d -o CMakeFiles/kernel_sse.dir/kernel_main.cpp.o -c /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp
 
 CMakeFiles/kernel_sse.dir/kernel_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kernel_sse.dir/kernel_main.cpp.i"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp > CMakeFiles/kernel_sse.dir/kernel_main.cpp.i
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp > CMakeFiles/kernel_sse.dir/kernel_main.cpp.i
 
 CMakeFiles/kernel_sse.dir/kernel_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kernel_sse.dir/kernel_main.cpp.s"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp -o CMakeFiles/kernel_sse.dir/kernel_main.cpp.s
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp -o CMakeFiles/kernel_sse.dir/kernel_main.cpp.s
 
 CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.o: CMakeFiles/kernel_sse.dir/flags.make
 CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.o: ../cloth_code_sse.cpp
 CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.o: CMakeFiles/kernel_sse.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.o"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.o -MF CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.o.d -o CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.o -c /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse.cpp
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.o -MF CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.o.d -o CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.o -c /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse.cpp
 
 CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.i"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse.cpp > CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.i
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse.cpp > CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.i
 
 CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.s"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse.cpp -o CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.s
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse.cpp -o CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.s
 
 # Object files for target kernel_sse
 kernel_sse_OBJECTS = \

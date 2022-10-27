@@ -73,29 +73,29 @@ CMakeFiles/opengl_main.dir/opengl_main.cpp.o: CMakeFiles/opengl_main.dir/flags.m
 CMakeFiles/opengl_main.dir/opengl_main.cpp.o: ../opengl_main.cpp
 CMakeFiles/opengl_main.dir/opengl_main.cpp.o: CMakeFiles/opengl_main.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/opengl_main.dir/opengl_main.cpp.o"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opengl_main.dir/opengl_main.cpp.o -MF CMakeFiles/opengl_main.dir/opengl_main.cpp.o.d -o CMakeFiles/opengl_main.dir/opengl_main.cpp.o -c /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/opengl_main.cpp
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opengl_main.dir/opengl_main.cpp.o -MF CMakeFiles/opengl_main.dir/opengl_main.cpp.o.d -o CMakeFiles/opengl_main.dir/opengl_main.cpp.o -c /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/opengl_main.cpp
 
 CMakeFiles/opengl_main.dir/opengl_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl_main.dir/opengl_main.cpp.i"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/opengl_main.cpp > CMakeFiles/opengl_main.dir/opengl_main.cpp.i
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/opengl_main.cpp > CMakeFiles/opengl_main.dir/opengl_main.cpp.i
 
 CMakeFiles/opengl_main.dir/opengl_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl_main.dir/opengl_main.cpp.s"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/opengl_main.cpp -o CMakeFiles/opengl_main.dir/opengl_main.cpp.s
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/opengl_main.cpp -o CMakeFiles/opengl_main.dir/opengl_main.cpp.s
 
 CMakeFiles/opengl_main.dir/cloth_code.cpp.o: CMakeFiles/opengl_main.dir/flags.make
 CMakeFiles/opengl_main.dir/cloth_code.cpp.o: ../cloth_code.cpp
 CMakeFiles/opengl_main.dir/cloth_code.cpp.o: CMakeFiles/opengl_main.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/opengl_main.dir/cloth_code.cpp.o"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opengl_main.dir/cloth_code.cpp.o -MF CMakeFiles/opengl_main.dir/cloth_code.cpp.o.d -o CMakeFiles/opengl_main.dir/cloth_code.cpp.o -c /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code.cpp
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opengl_main.dir/cloth_code.cpp.o -MF CMakeFiles/opengl_main.dir/cloth_code.cpp.o.d -o CMakeFiles/opengl_main.dir/cloth_code.cpp.o -c /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code.cpp
 
 CMakeFiles/opengl_main.dir/cloth_code.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl_main.dir/cloth_code.cpp.i"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code.cpp > CMakeFiles/opengl_main.dir/cloth_code.cpp.i
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code.cpp > CMakeFiles/opengl_main.dir/cloth_code.cpp.i
 
 CMakeFiles/opengl_main.dir/cloth_code.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl_main.dir/cloth_code.cpp.s"
-	/opt/nci/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code.cpp -o CMakeFiles/opengl_main.dir/cloth_code.cpp.s
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code.cpp -o CMakeFiles/opengl_main.dir/cloth_code.cpp.s
 
 # Object files for target opengl_main
 opengl_main_OBJECTS = \
@@ -114,7 +114,7 @@ opengl_main: /usr/lib64/libGLU.so
 opengl_main: /usr/lib64/libglut.so
 opengl_main: /usr/lib64/libXmu.so
 opengl_main: /usr/lib64/libXi.so
-opengl_main: /half-root/usr/lib/gcc/x86_64-redhat-linux/8/libgomp.so
+opengl_main: /apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so
 opengl_main: /half-root/usr/lib64/libpthread.so
 opengl_main: CMakeFiles/opengl_main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable opengl_main"

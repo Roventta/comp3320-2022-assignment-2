@@ -2,8 +2,8 @@
 <root>
  <cli_project type="bool">true</cli_project>
  <rdmgr>
-  <timestamp type="u64_t">1666708666</timestamp>
-  <hostname type="string">gadi-login-05.gadi.nci.org.au</hostname>
+  <timestamp type="u64_t">1666858193</timestamp>
+  <hostname type="string">gadi-login-07.gadi.nci.org.au</hostname>
   <os type="string">linux</os>
   <product type="string">Intel® Advisor 2022.1</product>
   <buildNumber type="s32_t">613050</buildNumber>
@@ -18,13 +18,37 @@
   <isa type="string">avx512</isa>
  </rdmgr>
  <All_Configurations-All_Platforms>
+  <searchDirs>
+   <searchCategory>
+    <category type="u8_t">1</category>
+    <searchDirectory>
+     <name type="string">./</name>
+     <recursive type="bool">false</recursive>
+     <priority type="bool">false</priority>
+    </searchDirectory>
+   </searchCategory>
+   <searchCategory>
+    <category type="u8_t">2</category>
+   </searchCategory>
+   <searchCategory>
+    <category type="u8_t">3</category>
+    <searchDirectory>
+     <name type="string">../</name>
+     <recursive type="bool">false</recursive>
+     <priority type="bool">false</priority>
+    </searchDirectory>
+   </searchCategory>
+   <searchCategory>
+    <category type="u8_t">4</category>
+   </searchCategory>
+  </searchDirs>
   <target_settings>
    <workloads>
     <localhost>
      <release type="pointer" type_id="dasID_cctrl2::ApplicationWorkload" ptr_type="dasID_cctrl2::IWorkload">
       <workload>
        <targetName type="string">release</targetName>
-       <launch_app.app_to_launch type="string">./kernel_vect_omp</launch_app.app_to_launch>
+       <launch_app.app_to_launch type="string">./kernel_mp</launch_app.app_to_launch>
        <launch_app.app_parameters type="string">-n 200 -d 3</launch_app.app_parameters>
        <context>
         <contextValue>
@@ -129,29 +153,5 @@
     </localhost>
    </workloads>
   </target_settings>
-  <searchDirs>
-   <searchCategory>
-    <category type="u8_t">1</category>
-    <searchDirectory>
-     <name type="string">./</name>
-     <recursive type="bool">false</recursive>
-     <priority type="bool">false</priority>
-    </searchDirectory>
-   </searchCategory>
-   <searchCategory>
-    <category type="u8_t">2</category>
-   </searchCategory>
-   <searchCategory>
-    <category type="u8_t">3</category>
-    <searchDirectory>
-     <name type="string">../</name>
-     <recursive type="bool">false</recursive>
-     <priority type="bool">false</priority>
-    </searchDirectory>
-   </searchCategory>
-   <searchCategory>
-    <category type="u8_t">4</category>
-   </searchCategory>
-  </searchDirs>
  </All_Configurations-All_Platforms>
 </root>

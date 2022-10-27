@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
  <rdmgr>
-  <timestamp type="u64_t">1666708666</timestamp>
-  <hostname type="string">gadi-login-05.gadi.nci.org.au</hostname>
+  <timestamp type="u64_t">1666858193</timestamp>
+  <hostname type="string">gadi-login-07.gadi.nci.org.au</hostname>
   <os type="string">linux</os>
   <product type="string">Intel® Advisor 2022.1</product>
   <buildNumber type="s32_t">613050</buildNumber>

@@ -1,13 +1,15 @@
+#include <omp.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <omp.h>
+#include <cstdlib>
 #include "./cloth_code.h"
 #include "./cloth_param.h"
 
 int main(int argc, char **argv) {
   int i, iter;
   double pe, ke, te;
+  int threadNum;
   // assess input flags
 
   for (i = 1; i < argc; i += 2) {
@@ -43,6 +45,10 @@ int main(int argc, char **argv) {
       case 'i':
         maxiter = atoi(argv[i + 1]);
         break;
+
+	case 'p':
+	threadNum = atoi(argv[i+1]);
+	break;
       default:
         printf(" %s\n"
                "Nodes_per_dimension:             -n int \n"
@@ -93,6 +99,9 @@ int main(int argc, char **argv) {
   initMatrix(n, mass, fcon, delta, grav, sep, rball, offset, dt, &x, &y, &z,
              &cpx, &cpy, &cpz, &fx, &fy, &fz, &vx, &vy, &vz, &oldfx, &oldfy,
              &oldfz);
+
+  // omp activation;
+	omp_set_num_threads(threadNum);
 
   for (iter = 0; iter < maxiter; iter++) {
     loopcode(n, mass, fcon, delta, grav, sep, rball, xball, yball, zball, dt, x,

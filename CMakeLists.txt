@@ -44,7 +44,7 @@ message(STATUS "GLUT included at ${GLUT_INCLUDE_DIR}")
 find_package(OpenMP)
 message(STATUS "OpenMP included at ${OPENMP_INCLUDE_DIR}")
 
-include_directories(${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
+include_directories(${OPENMP_INCLUDE_DIR} ${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
 
 add_executable(
   opengl_main
@@ -74,9 +74,17 @@ add_executable(
 	cloth_code_mp.cpp
 	)
 
+add_executable(
+	kernel_omp
+	kernel_main_mp.cpp
+	cloth_code_sse_mp.cpp
+	)
 
 set_target_properties(kernel_sse PROPERTIES COMPILE_FLAGS "-mavx2 -march=native")
 set_target_properties(kernel_vect_omp PROPERTIES COMPILE_FLAGS "-fopenmp")
+set_target_properties(kernel_omp PROPERTIES COMPILE_FLAGS "-mavx -march=native")
+
+target_link_libraries(kernel_omp m OpenMP::OpenMP_CXX)
 
 if(OpenMP_FOUND)
   target_link_libraries(kernel_main m OpenMP::OpenMP_CXX)

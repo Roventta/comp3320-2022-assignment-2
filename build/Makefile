@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/half-root/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/apps/cmake/3.21.4/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -143,6 +143,19 @@ kernel_vect_omp/fast:
 .PHONY : kernel_vect_omp/fast
 
 #=============================================================================
+# Target rules for targets named kernel_opt
+
+# Build rule for target.
+kernel_opt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kernel_opt
+.PHONY : kernel_opt
+
+# fast build rule for target.
+kernel_opt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_opt.dir/build.make CMakeFiles/kernel_opt.dir/build
+.PHONY : kernel_opt/fast
+
+#=============================================================================
 # Target rules for targets named opengl_main
 
 # Build rule for target.
@@ -156,30 +169,17 @@ opengl_main/fast:
 .PHONY : opengl_main/fast
 
 #=============================================================================
-# Target rules for targets named papi_omp
+# Target rules for targets named kernel_omp
 
 # Build rule for target.
-papi_omp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 papi_omp
-.PHONY : papi_omp
+kernel_omp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kernel_omp
+.PHONY : kernel_omp
 
 # fast build rule for target.
-papi_omp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/papi_omp.dir/build.make CMakeFiles/papi_omp.dir/build
-.PHONY : papi_omp/fast
-
-#=============================================================================
-# Target rules for targets named kernel_opt
-
-# Build rule for target.
-kernel_opt: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kernel_opt
-.PHONY : kernel_opt
-
-# fast build rule for target.
-kernel_opt/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_opt.dir/build.make CMakeFiles/kernel_opt.dir/build
-.PHONY : kernel_opt/fast
+kernel_omp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/build
+.PHONY : kernel_omp/fast
 
 #=============================================================================
 # Target rules for targets named kernel_sse
@@ -227,7 +227,6 @@ cloth_code_mp.o: cloth_code_mp.cpp.o
 # target to build an object file
 cloth_code_mp.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/papi_omp.dir/build.make CMakeFiles/papi_omp.dir/cloth_code_mp.cpp.o
 .PHONY : cloth_code_mp.cpp.o
 
 cloth_code_mp.i: cloth_code_mp.cpp.i
@@ -236,7 +235,6 @@ cloth_code_mp.i: cloth_code_mp.cpp.i
 # target to preprocess a source file
 cloth_code_mp.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/papi_omp.dir/build.make CMakeFiles/papi_omp.dir/cloth_code_mp.cpp.i
 .PHONY : cloth_code_mp.cpp.i
 
 cloth_code_mp.s: cloth_code_mp.cpp.s
@@ -245,7 +243,6 @@ cloth_code_mp.s: cloth_code_mp.cpp.s
 # target to generate assembly for a file
 cloth_code_mp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/papi_omp.dir/build.make CMakeFiles/papi_omp.dir/cloth_code_mp.cpp.s
 .PHONY : cloth_code_mp.cpp.s
 
 cloth_code_sse.o: cloth_code_sse.cpp.o
@@ -271,6 +268,30 @@ cloth_code_sse.s: cloth_code_sse.cpp.s
 cloth_code_sse.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_sse.dir/build.make CMakeFiles/kernel_sse.dir/cloth_code_sse.cpp.s
 .PHONY : cloth_code_sse.cpp.s
+
+cloth_code_sse_mp.o: cloth_code_sse_mp.cpp.o
+.PHONY : cloth_code_sse_mp.o
+
+# target to build an object file
+cloth_code_sse_mp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/cloth_code_sse_mp.cpp.o
+.PHONY : cloth_code_sse_mp.cpp.o
+
+cloth_code_sse_mp.i: cloth_code_sse_mp.cpp.i
+.PHONY : cloth_code_sse_mp.i
+
+# target to preprocess a source file
+cloth_code_sse_mp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/cloth_code_sse_mp.cpp.i
+.PHONY : cloth_code_sse_mp.cpp.i
+
+cloth_code_sse_mp.s: cloth_code_sse_mp.cpp.s
+.PHONY : cloth_code_sse_mp.s
+
+# target to generate assembly for a file
+cloth_code_sse_mp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/cloth_code_sse_mp.cpp.s
+.PHONY : cloth_code_sse_mp.cpp.s
 
 cloth_code_trival.o: cloth_code_trival.cpp.o
 .PHONY : cloth_code_trival.o
@@ -329,6 +350,30 @@ kernel_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_sse.dir/build.make CMakeFiles/kernel_sse.dir/kernel_main.cpp.s
 .PHONY : kernel_main.cpp.s
 
+kernel_main_mp.o: kernel_main_mp.cpp.o
+.PHONY : kernel_main_mp.o
+
+# target to build an object file
+kernel_main_mp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/kernel_main_mp.cpp.o
+.PHONY : kernel_main_mp.cpp.o
+
+kernel_main_mp.i: kernel_main_mp.cpp.i
+.PHONY : kernel_main_mp.i
+
+# target to preprocess a source file
+kernel_main_mp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/kernel_main_mp.cpp.i
+.PHONY : kernel_main_mp.cpp.i
+
+kernel_main_mp.s: kernel_main_mp.cpp.s
+.PHONY : kernel_main_mp.s
+
+# target to generate assembly for a file
+kernel_main_mp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/kernel_main_mp.cpp.s
+.PHONY : kernel_main_mp.cpp.s
+
 opengl_main.o: opengl_main.cpp.o
 .PHONY : opengl_main.o
 
@@ -353,30 +398,6 @@ opengl_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_main.dir/build.make CMakeFiles/opengl_main.dir/opengl_main.cpp.s
 .PHONY : opengl_main.cpp.s
 
-test_build/papi_measurement.o: test_build/papi_measurement.cpp.o
-.PHONY : test_build/papi_measurement.o
-
-# target to build an object file
-test_build/papi_measurement.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/papi_omp.dir/build.make CMakeFiles/papi_omp.dir/test_build/papi_measurement.cpp.o
-.PHONY : test_build/papi_measurement.cpp.o
-
-test_build/papi_measurement.i: test_build/papi_measurement.cpp.i
-.PHONY : test_build/papi_measurement.i
-
-# target to preprocess a source file
-test_build/papi_measurement.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/papi_omp.dir/build.make CMakeFiles/papi_omp.dir/test_build/papi_measurement.cpp.i
-.PHONY : test_build/papi_measurement.cpp.i
-
-test_build/papi_measurement.s: test_build/papi_measurement.cpp.s
-.PHONY : test_build/papi_measurement.s
-
-# target to generate assembly for a file
-test_build/papi_measurement.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/papi_omp.dir/build.make CMakeFiles/papi_omp.dir/test_build/papi_measurement.cpp.s
-.PHONY : test_build/papi_measurement.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -386,11 +407,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... kernel_main"
+	@echo "... kernel_omp"
 	@echo "... kernel_opt"
 	@echo "... kernel_sse"
 	@echo "... kernel_vect_omp"
 	@echo "... opengl_main"
-	@echo "... papi_omp"
 	@echo "... cloth_code.o"
 	@echo "... cloth_code.i"
 	@echo "... cloth_code.s"
@@ -400,18 +421,21 @@ help:
 	@echo "... cloth_code_sse.o"
 	@echo "... cloth_code_sse.i"
 	@echo "... cloth_code_sse.s"
+	@echo "... cloth_code_sse_mp.o"
+	@echo "... cloth_code_sse_mp.i"
+	@echo "... cloth_code_sse_mp.s"
 	@echo "... cloth_code_trival.o"
 	@echo "... cloth_code_trival.i"
 	@echo "... cloth_code_trival.s"
 	@echo "... kernel_main.o"
 	@echo "... kernel_main.i"
 	@echo "... kernel_main.s"
+	@echo "... kernel_main_mp.o"
+	@echo "... kernel_main_mp.i"
+	@echo "... kernel_main_mp.s"
 	@echo "... opengl_main.o"
 	@echo "... opengl_main.i"
 	@echo "... opengl_main.s"
-	@echo "... test_build/papi_measurement.o"
-	@echo "... test_build/papi_measurement.i"
-	@echo "... test_build/papi_measurement.s"
 .PHONY : help
 
 

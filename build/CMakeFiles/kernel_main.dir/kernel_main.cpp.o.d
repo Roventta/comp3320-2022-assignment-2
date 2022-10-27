@@ -1,48 +1,86 @@
 CMakeFiles/kernel_main.dir/kernel_main.cpp.o: \
  /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp \
- /usr/include/stdc-predef.h /half-root/usr/include/c++/8/math.h \
- /half-root/usr/include/c++/8/cmath \
- /half-root/usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
- /usr/include/bits/wordsize.h \
- /half-root/usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
- /usr/include/features.h /usr/include/sys/cdefs.h \
- /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h \
- /half-root/usr/include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h \
- /half-root/usr/include/c++/8/bits/cpp_type_traits.h \
- /half-root/usr/include/c++/8/ext/type_traits.h /usr/include/math.h \
- /usr/include/bits/libc-header-start.h /usr/include/bits/types.h \
- /usr/include/bits/typesizes.h /usr/include/bits/math-vector.h \
- /usr/include/bits/libm-simd-decl-stubs.h /usr/include/bits/floatn.h \
- /usr/include/bits/floatn-common.h /usr/include/bits/flt-eval-method.h \
- /usr/include/bits/fp-logb.h /usr/include/bits/fp-fast.h \
- /usr/include/bits/mathcalls-helper-functions.h \
- /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
- /usr/include/bits/iscanonical.h /usr/include/bits/mathinline.h \
- /half-root/usr/include/c++/8/bits/std_abs.h /usr/include/stdlib.h \
- /half-root/usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
- /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
- /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
- /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
- /usr/include/bits/types/clockid_t.h /usr/include/bits/types/time_t.h \
- /usr/include/bits/types/timer_t.h /usr/include/bits/stdint-intn.h \
- /usr/include/endian.h /usr/include/bits/endian.h \
- /usr/include/bits/byteswap.h /usr/include/bits/uintn-identity.h \
- /usr/include/sys/select.h /usr/include/bits/select.h \
- /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h \
- /usr/include/bits/types/struct_timeval.h \
- /usr/include/bits/types/struct_timespec.h \
- /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
- /usr/include/bits/pthreadtypes-arch.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-bsearch.h /usr/include/bits/stdlib-float.h \
- /usr/include/stdio.h \
- /half-root/usr/lib/gcc/x86_64-redhat-linux/8/include/stdarg.h \
- /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \
- /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
- /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
- /usr/include/bits/types/cookie_io_functions_t.h \
- /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
- /usr/include/bits/stdio.h /half-root/usr/include/c++/8/stdlib.h \
- /half-root/usr/include/c++/8/cstdlib \
+ /usr/include/stdc-predef.h \
+ /apps/intel-oneapi/compiler/2022.1.0/linux/bin/intel64/../../compiler/include/math.h \
+ /half-root/usr/bin/../include/c++/8/math.h \
+ /half-root/usr/bin/../include/c++/8/cmath \
+ /half-root/usr/bin/../include/c++/8/x86_64-redhat-linux/bits/c++config.h \
+ /half-root/usr/bin/../include/bits/wordsize.h \
+ /half-root/usr/bin/../include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
+ /half-root/usr/bin/../include/features.h \
+ /half-root/usr/bin/../include/sys/cdefs.h \
+ /half-root/usr/bin/../include/bits/long-double.h \
+ /half-root/usr/bin/../include/gnu/stubs.h \
+ /half-root/usr/bin/../include/gnu/stubs-64.h \
+ /half-root/usr/bin/../include/c++/8/x86_64-redhat-linux/bits/cpu_defines.h \
+ /half-root/usr/bin/../include/c++/8/bits/cpp_type_traits.h \
+ /half-root/usr/bin/../include/c++/8/ext/type_traits.h \
+ /half-root/usr/bin/../include/math.h \
+ /half-root/usr/bin/../include/bits/libc-header-start.h \
+ /half-root/usr/bin/../include/bits/types.h \
+ /half-root/usr/bin/../include/bits/typesizes.h \
+ /half-root/usr/bin/../include/bits/math-vector.h \
+ /half-root/usr/bin/../include/bits/libm-simd-decl-stubs.h \
+ /half-root/usr/bin/../include/bits/floatn.h \
+ /half-root/usr/bin/../include/bits/floatn-common.h \
+ /half-root/usr/bin/../include/bits/flt-eval-method.h \
+ /half-root/usr/bin/../include/bits/fp-logb.h \
+ /half-root/usr/bin/../include/bits/fp-fast.h \
+ /half-root/usr/bin/../include/bits/mathcalls-helper-functions.h \
+ /half-root/usr/bin/../include/bits/mathcalls.h \
+ /half-root/usr/bin/../include/bits/mathcalls-narrow.h \
+ /half-root/usr/bin/../include/bits/iscanonical.h \
+ /half-root/usr/bin/../include/bits/mathinline.h \
+ /half-root/usr/bin/../include/c++/8/bits/std_abs.h \
+ /half-root/usr/bin/../include/stdlib.h \
+ /apps/intel-oneapi/compiler/2022.1.0/linux/bin/intel64/../../compiler/include/icc/stddef.h \
+ /half-root/usr/bin/../include/bits/waitflags.h \
+ /half-root/usr/bin/../include/bits/waitstatus.h \
+ /half-root/usr/bin/../include/bits/types/locale_t.h \
+ /half-root/usr/bin/../include/bits/types/__locale_t.h \
+ /half-root/usr/bin/../include/sys/types.h \
+ /half-root/usr/bin/../include/bits/types/clock_t.h \
+ /half-root/usr/bin/../include/bits/types/clockid_t.h \
+ /half-root/usr/bin/../include/bits/types/time_t.h \
+ /half-root/usr/bin/../include/bits/types/timer_t.h \
+ /half-root/usr/bin/../include/bits/stdint-intn.h \
+ /half-root/usr/bin/../include/endian.h \
+ /half-root/usr/bin/../include/bits/endian.h \
+ /half-root/usr/bin/../include/bits/byteswap.h \
+ /half-root/usr/bin/../include/bits/uintn-identity.h \
+ /half-root/usr/bin/../include/sys/select.h \
+ /half-root/usr/bin/../include/bits/select.h \
+ /half-root/usr/bin/../include/bits/types/sigset_t.h \
+ /half-root/usr/bin/../include/bits/types/__sigset_t.h \
+ /half-root/usr/bin/../include/bits/types/struct_timeval.h \
+ /half-root/usr/bin/../include/bits/types/struct_timespec.h \
+ /half-root/usr/bin/../include/bits/pthreadtypes.h \
+ /half-root/usr/bin/../include/bits/thread-shared-types.h \
+ /half-root/usr/bin/../include/bits/pthreadtypes-arch.h \
+ /half-root/usr/bin/../include/alloca.h \
+ /half-root/usr/bin/../include/bits/stdlib-bsearch.h \
+ /half-root/usr/bin/../include/bits/stdlib-float.h \
+ /apps/intel-oneapi/compiler/2022.1.0/linux/bin/intel64/../../compiler/include/math_common_define.h \
+ /apps/intel-oneapi/compiler/2022.1.0/linux/bin/intel64/../../compiler/include/math_common_undefine.h \
+ /half-root/usr/bin/../include/stdio.h \
+ /apps/intel-oneapi/compiler/2022.1.0/linux/bin/intel64/../../compiler/include/icc/stdarg.h \
+ /half-root/usr/bin/../include/bits/types/__fpos_t.h \
+ /half-root/usr/bin/../include/bits/types/__mbstate_t.h \
+ /half-root/usr/bin/../include/bits/types/__fpos64_t.h \
+ /half-root/usr/bin/../include/bits/types/__FILE.h \
+ /half-root/usr/bin/../include/bits/types/FILE.h \
+ /half-root/usr/bin/../include/bits/types/struct_FILE.h \
+ /half-root/usr/bin/../include/bits/types/cookie_io_functions_t.h \
+ /half-root/usr/bin/../include/bits/stdio_lim.h \
+ /half-root/usr/bin/../include/bits/sys_errlist.h \
+ /half-root/usr/bin/../include/bits/stdio.h \
+ /half-root/usr/bin/../include/c++/8/stdlib.h \
+ /half-root/usr/bin/../include/c++/8/cstdlib \
+ /apps/intel-oneapi/compiler/2022.1.0/linux/bin/intel64/../../compiler/include/omp.h \
+ /apps/intel-oneapi/compiler/2022.1.0/linux/bin/intel64/../../compiler/include/icc/stdint.h \
+ /half-root/usr/bin/../lib/gcc/x86_64-redhat-linux/8/include/stdint.h \
+ /half-root/usr/bin/../include/stdint.h \
+ /half-root/usr/bin/../include/bits/wchar.h \
+ /half-root/usr/bin/../include/bits/stdint-uintn.h \
  /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/./cloth_code.h \
  /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/./cloth_param.h
