@@ -1,273 +1,269 @@
 # callstacks file version: 8
 #    rowid	    parent	       rva	 loop	 system	                                function	binary	instance_start_rva	instance_size	instance_end_rva	finst_rowid	roi	is_inlined	jit_method_id	tripcounts_roi	flops_roi	cachesim_roi	data_transfer_roi	projection_roi
          1	        -1	      4608	    0	      0	                                  _start	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	4608	47	0	1	0	0	0	0	0	0	0	0
-         2	        -1	    127687	    0	      1	                                 [stack]	[stack]	0	0	0	161	0	0	0	0	0	0	0	0
+         2	        -1	    126471	    0	      1	                                 [stack]	[stack]	0	0	0	47	0	0	0	0	0	0	0	0
          3	         2	      4653	    0	      0	                                  _start	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	4608	47	0	1	0	0	0	0	0	0	0	0
-         4	       141	    240882	    1	      1	     [Loop@0x3ac64 in __libc_start_main]	/lib64/libc.so.6	240740,240984	230,102	0	3	0	0	0	0	0	0	0	0
-         5	         4	     18794	    0	      0	                                    main	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18064	1072	0	8	0	0	0	0	0	0	0	0
-         6	         5	    556429	    0	      1	                    ompc_set_num_threads	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	556416	64	0	37	0	0	0	0	0	0	0	0
-         7	       267	    800681	    0	      1	            __kmp_acquire_bootstrap_lock	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	800662	20	0	38	0	1	0	0	0	0	0	0
-         8	       269	    766334	    0	      1	_INTERNAL4093ea9e::__kmp_acquire_ticket_lock_timed_template	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	766273,766282,766290,766794	3,5,492,54	0	40	0	1	0	0	0	0	0	0
-         9	         8	    264337	    0	      1	_INTERNAL62d1a084::__kmp_itt_fsync_acquired_init_3_0	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	264256	128	0	42	0	0	0	0	0	0	0	0
-        10	         9	    238535	    0	      1	                   __kmp_itt_init_ittlib	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	236992	3456	0	43	0	0	0	0	0	0	0	0
+         4	       137	    240882	    1	      1	     [Loop@0x3ac64 in __libc_start_main]	/lib64/libc.so.6	240740,240984	230,102	0	3	0	0	0	0	0	0	0	0
+         5	         4	     18794	    0	      0	                                    main	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18064	1072	0	4	0	0	0	0	0	0	0	0
+         6	         5	    556429	    0	      1	                    ompc_set_num_threads	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	556416	64	0	40	0	0	0	0	0	0	0	0
+         7	       263	    800681	    0	      1	            __kmp_acquire_bootstrap_lock	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	800662	20	0	41	0	1	0	0	0	0	0	0
+         8	       265	    766334	    0	      1	_INTERNAL4093ea9e::__kmp_acquire_ticket_lock_timed_template	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	766273,766282,766290,766794	3,5,492,54	0	43	0	1	0	0	0	0	0	0
+         9	         8	    264337	    0	      1	_INTERNAL62d1a084::__kmp_itt_fsync_acquired_init_3_0	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	264256	128	0	45	0	0	0	0	0	0	0	0
+        10	         9	    238535	    0	      1	                   __kmp_itt_init_ittlib	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	236992	3456	0	46	0	0	0	0	0	0	0	0
         11	        10	     73817	    0	      1	                          __itt_api_init	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	73728	784	0	2	0	0	0	0	0	0	0	0
-        12	        11	     27425	    0	      1	                             func@0x6a50	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	27216	480	0	9	0	0	0	0	0	0	0	0
-        13	        12	    559942	    0	      1	                            func@0x88ac0	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	559808	320	0	12	0	0	0	0	0	0	0	0
-        14	       137	    574496	    1	      1	          [Loop@0x8c407 in func@0x8c2f0]	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	574471,575013	356,10	0	13	0	0	0	0	0	0	0	0
-        15	        14	    542103	    0	      1	                                  sscanf	/lib64/libc.so.6	541952	181	0	5	0	0	0	0	0	0	0	0
-        16	        15	    565056	    0	      1	                               __vsscanf	/lib64/libc.so.6	564944	167	0	6	0	0	0	0	0	0	0	0
-        17	        16	    617253	    0	      1	            _IO_str_init_static_internal	/lib64/libc.so.6	617216	150	0	7	0	0	0	0	0	0	0	0
-        18	        17	    822761	    0	      1	                        __rawmemchr_avx2	/lib64/libc.so.6	822672	333	0	25	0	0	0	0	0	0	0	0
-        19	        11	     27661	    0	      1	                             func@0x6a50	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	27216	480	0	9	0	0	0	0	0	0	0	0
-        20	        19	     75547	    0	      1	                            func@0x126a0	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	75424	176	0	19	0	0	0	0	0	0	0	0
-        21	        11	     27679	    0	      1	                             func@0x6a50	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	27216	480	0	9	0	0	0	0	0	0	0	0
-        22	       139	     75407	    1	      1	          [Loop@0x1268b in func@0x12680]	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	75403	15	0	21	0	0	0	0	0	0	0	0
-        23	        22	    574172	    0	      1	                            func@0x8c2d0	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	574160	16	0	24	0	0	0	0	0	0	0	0
-        24	        23	    235805	    0	      1	                                 syscall	/lib64/libc.so.6	235776	55	0	29	0	0	0	0	0	0	0	0
-        25	       143	     18994	    1	      0	                 [Loop@0x40498b in main]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18827	223	19050	10	0	0	0	0	0	0	0	0
-        26	        25	      7862	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-        27	       149	     12918	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	15	0	0	0	0	0	0	0	0
-        28	       147	     10899	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        29	       152	     15323	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        30	       148	     12980	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
-        31	       156	     11786	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-        32	       152	     15201	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        33	       152	     15208	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        34	       156	     11766	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-        35	       152	     15317	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        36	       152	     15194	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        37	       165	      6760	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	30	0	0	0	0	0	0	0	0
-        38	       152	     15287	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        39	       152	     15341	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        40	       152	     15072	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        41	       156	     11756	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-        42	       152	     15233	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        43	       152	     15311	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        44	       149	     12880	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	15	0	0	0	0	0	0	0	0
-        45	       152	     15281	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        46	       152	     15257	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        47	       152	     15305	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        48	       152	     15188	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        49	       152	     15263	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        50	       147	     15436	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        51	       156	     11740	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-        52	       149	     12886	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	15	0	0	0	0	0	0	0	0
-        53	       182	     14866	    1	      0	             [Loop@0x4039e8 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14824	63	14887	33	0	0	0	0	0	0	0	0
-        54	       149	     12924	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	15	0	0	0	0	0	0	0	0
-        55	       148	     12039	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
-        56	       149	     12909	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	15	0	0	0	0	0	0	0	0
-        57	       187	     14086	    1	      0	             [Loop@0x4036ee in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14062	58	14120	34	0	0	0	0	0	0	0	0
-        58	       147	     14151	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        59	       149	     12900	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	15	0	0	0	0	0	0	0	0
-        60	       148	     12829	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
-        61	       147	     13389	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        62	       152	     15093	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        63	       155	     11826	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	28	0	0	0	0	0	0	0	0
-        64	       165	      6736	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	30	0	0	0	0	0	0	0	0
-        65	       182	     14879	    1	      0	             [Loop@0x4039e8 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14824	63	14887	33	0	0	0	0	0	0	0	0
-        66	       187	     14104	    1	      0	             [Loop@0x4036ee in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14062	58	14120	34	0	0	0	0	0	0	0	0
-        67	       156	     11780	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-        68	       152	     15181	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        69	       152	     15133	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        70	       147	     15450	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        71	       202	      8725	    1	      0	             [Loop@0x4021d6 in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	8662	183	8845	35	0	0	0	0	0	0	0	0
-        72	       149	     12897	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	15	0	0	0	0	0	0	0	0
-        73	       205	     15767	    1	      0	             [Loop@0x403d1e in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15646	185	15831	36	0	0	0	0	0	0	0	0
-        74	       148	     12964	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
-        75	       152	     15151	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        76	       156	     11758	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-        77	       152	     15174	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        78	       202	      8829	    1	      0	             [Loop@0x4021d6 in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	8662	183	8845	35	0	0	0	0	0	0	0	0
-        79	       148	     12035	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
-        80	       147	     15367	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        81	       152	     15112	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        82	       152	     15269	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        83	       156	     11774	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-        84	       147	     15513	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        85	       156	     11750	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-        86	        26	     16554	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-        87	       147	     14914	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        88	       165	      6816	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	30	0	0	0	0	0	0	0	0
-        89	       147	     14126	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        90	       148	     12859	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
-        91	       152	     15119	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        92	       152	     15098	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-        93	       147	     15408	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        94	       165	      6437	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	30	0	0	0	0	0	0	0	0
-        95	       147	     15492	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-        96	       182	     14846	    1	      0	             [Loop@0x4039e8 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14824	63	14887	33	0	0	0	0	0	0	0	0
-        97	        26	     16597	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-        98	       155	     11813	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	28	0	0	0	0	0	0	0	0
-        99	        26	     16552	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       100	       152	     15245	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-       101	       149	     12930	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	15	0	0	0	0	0	0	0	0
-       102	       165	      6772	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	30	0	0	0	0	0	0	0	0
-       103	       147	     14808	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       104	       148	     12853	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
-       105	       149	     12912	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	15	0	0	0	0	0	0	0	0
-       106	       205	     15786	    1	      0	             [Loop@0x403d1e in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15646	185	15831	36	0	0	0	0	0	0	0	0
-       107	       152	     15275	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-       108	       149	     12941	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	15	0	0	0	0	0	0	0	0
-       109	       147	     10819	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       110	       182	     14860	    1	      0	             [Loop@0x4039e8 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14824	63	14887	33	0	0	0	0	0	0	0	0
-       111	       165	      6604	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	30	0	0	0	0	0	0	0	0
-       112	       187	     14098	    1	      0	             [Loop@0x4036ee in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14062	58	14120	34	0	0	0	0	0	0	0	0
-       113	       152	     15124	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-       114	       147	     10835	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       115	       165	      6598	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	30	0	0	0	0	0	0	0	0
-       116	       152	     15335	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-       117	       148	     12992	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
-       118	       148	     12946	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
-       119	       156	     11746	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-       120	       152	     15226	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-       121	       152	     15251	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-       122	       156	     11797	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-       123	       165	      6742	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	30	0	0	0	0	0	0	0	0
-       124	       152	     15144	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-       125	       147	     15527	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       126	       147	     10922	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       127	       147	     15860	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       128	       202	      8813	    1	      0	             [Loop@0x4021d6 in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	8662	183	8845	35	0	0	0	0	0	0	0	0
-       129	       152	     15214	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	26	0	0	0	0	0	0	0	0
-       130	       155	     11725	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	28	0	0	0	0	0	0	0	0
-       131	       155	     11708	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	28	0	0	0	0	0	0	0	0
-       132	       147	     10866	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       133	       156	     11768	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	27	0	0	0	0	0	0	0	0
-       134	       202	      8837	    1	      0	             [Loop@0x4021d6 in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	8662	183	8845	35	0	0	0	0	0	0	0	0
-       135	       147	     12015	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       136	       147	     11974	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       137	        13	    574471	    0	      1	                            func@0x8c2f0	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	574192	912	0	14	0	0	0	0	0	0	0	0
-       138	        13	    574496	    0	      1	                            func@0x8c2f0	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	574192	912	0	14	0	0	0	0	0	0	0	0
-       139	        21	     75403	    0	      1	                            func@0x12680	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	75392	32	0	22	0	0	0	0	0	0	0	0
-       140	        21	     75407	    0	      1	                            func@0x12680	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	75392	32	0	22	0	0	0	0	0	0	0	0
-       141	         3	    240740	    0	      1	                       __libc_start_main	/lib64/libc.so.6	240640	446	0	4	0	0	0	0	0	0	0	0
-       142	         3	    240882	    0	      1	                       __libc_start_main	/lib64/libc.so.6	240640	446	0	4	0	0	0	0	0	0	0	0
-       143	         4	     18827	    0	      0	                                    main	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18064	1072	0	8	0	0	0	0	0	0	0	0
-       144	         4	     18994	    0	      0	                                    main	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18064	1072	0	8	0	0	0	0	0	0	0	0
-       145	        26	     10038	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       146	       145	     10198	    1	      0	             [Loop@0x402736 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10038	6063	16101,16581,16476,16541,16533,16518,16503,16495,16484,16101	23	0	0	0	0	0	0	0	0
-       147	       146	     10742	    1	      0	             [Loop@0x4027d6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10198	5824	16581,16476,16541,16533,16518,16503,16495,16484,16022	20	0	0	0	0	0	0	0	0
-       148	       147	     12022	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
+        12	        11	     27661	    0	      1	                             func@0x6a50	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	27216	480	0	15	0	0	0	0	0	0	0	0
+        13	        12	     75547	    0	      1	                            func@0x126a0	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	75424	176	0	26	0	0	0	0	0	0	0	0
+        14	        11	     27679	    0	      1	                             func@0x6a50	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	27216	480	0	15	0	0	0	0	0	0	0	0
+        15	       135	     75407	    1	      1	          [Loop@0x1268b in func@0x12680]	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	75403	15	0	27	0	0	0	0	0	0	0	0
+        16	        15	    574172	    0	      1	                            func@0x8c2d0	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	574160	16	0	30	0	0	0	0	0	0	0	0
+        17	        16	    235805	    0	      1	                                 syscall	/lib64/libc.so.6	235776	55	0	8	0	0	0	0	0	0	0	0
+        18	       141	     18994	    1	      0	                 [Loop@0x40498b in main]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18827	223	19050	6	0	0	0	0	0	0	0	0
+        19	        18	      7862	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+        20	       146	     15317	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        21	       149	     12912	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	16	0	0	0	0	0	0	0	0
+        22	       146	     15341	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        23	       146	     15201	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        24	       154	     11753	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+        25	       154	     11756	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+        26	       149	     12924	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	16	0	0	0	0	0	0	0	0
+        27	       146	     15311	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        28	       145	     14151	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+        29	       149	     12897	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	16	0	0	0	0	0	0	0	0
+        30	       146	     15257	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        31	       146	     15335	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        32	       149	     12941	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	16	0	0	0	0	0	0	0	0
+        33	       153	     11802	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	19	0	0	0	0	0	0	0	0
+        34	       167	      6604	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	20	0	0	0	0	0	0	0	0
+        35	       146	     15323	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        36	       154	     11780	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+        37	       149	     12880	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	16	0	0	0	0	0	0	0	0
+        38	       149	     12930	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	16	0	0	0	0	0	0	0	0
+        39	       149	     12900	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	16	0	0	0	0	0	0	0	0
+        40	       153	     11721	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	19	0	0	0	0	0	0	0	0
+        41	       154	     11797	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+        42	       145	     15471	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+        43	       145	     15450	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+        44	       154	     11766	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+        45	       146	     15098	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        46	       154	     11758	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+        47	       146	     15305	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        48	       146	     15281	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        49	       146	     15251	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        50	       146	     15269	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        51	       154	     11786	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+        52	       146	     15167	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        53	       153	     11829	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	19	0	0	0	0	0	0	0	0
+        54	       153	     10968	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	19	0	0	0	0	0	0	0	0
+        55	       189	     15650	    1	      0	             [Loop@0x403d1e in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15646	185	15831	24	0	0	0	0	0	0	0	0
+        56	       146	     15174	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        57	       146	     15181	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        58	       167	      6703	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	20	0	0	0	0	0	0	0	0
+        59	       146	     15287	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        60	       146	     15072	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        61	       145	     10922	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+        62	       149	     12909	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	16	0	0	0	0	0	0	0	0
+        63	       146	     15058	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        64	       154	     11740	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+        65	       146	     15263	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        66	       148	     12982	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
+        67	       146	     15124	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        68	       203	     14086	    1	      0	             [Loop@0x4036ee in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14062	58	14120	25	0	0	0	0	0	0	0	0
+        69	       146	     15105	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        70	       167	      6476	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	20	0	0	0	0	0	0	0	0
+        71	       148	     12992	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
+        72	       146	     15133	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        73	       145	     11917	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+        74	        19	     16565	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+        75	       148	     12039	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
+        76	       145	     14971	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+        77	       154	     11768	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+        78	       213	     14860	    1	      0	             [Loop@0x4039e8 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14824	63	14887	29	0	0	0	0	0	0	0	0
+        79	       189	     15737	    1	      0	             [Loop@0x403d1e in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15646	185	15831	24	0	0	0	0	0	0	0	0
+        80	       141	     19033	    1	      0	                 [Loop@0x40498b in main]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18827	223	19050	6	0	0	0	0	0	0	0	0
+        81	        80	    457305	    0	      1	                                  printf	/lib64/libc.so.6	457136	199	0	9	0	0	0	0	0	0	0	0
+        82	        81	    422505	    0	      1	                            _IO_vfprintf	/lib64/libc.so.6	420656	12132	0	23	0	0	0	0	0	0	0	0
+        83	        82	    603166	    0	      1	                         _IO_file_xsputn	/lib64/libc.so.6	602896	488	0	34	0	0	0	0	0	0	0	0
+        84	        83	    605704	    0	      1	                            _IO_do_write	/lib64/libc.so.6	605680	38	0	35	0	0	0	0	0	0	0	0
+        85	        84	    598206	    0	      1	                            new_do_write	/lib64/libc.so.6	598112	338	0	36	0	0	0	0	0	0	0	0
+        86	       139	    601420	    1	      1	        [Loop@0x92d48 in _IO_file_write]	/lib64/libc.so.6	601416	50	0	37	0	0	0	0	0	0	0	0
+        87	        86	   1181149	    0	      1	                                 __write	/lib64/libc.so.6	1181072	161	0	39	0	0	0	0	0	0	0	0
+        88	       146	     15299	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        89	       146	     15112	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        90	       146	     15239	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        91	       213	     14834	    1	      0	             [Loop@0x4039e8 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14824	63	14887	29	0	0	0	0	0	0	0	0
+        92	       146	     15214	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        93	       146	     15275	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        94	       145	     10803	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+        95	        19	     16601	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+        96	       145	     15527	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+        97	       146	     15151	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+        98	       149	     12893	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	16	0	0	0	0	0	0	0	0
+        99	       146	     15233	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+       100	       146	     15188	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+       101	       167	      6754	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	20	0	0	0	0	0	0	0	0
+       102	       153	     10972	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	19	0	0	0	0	0	0	0	0
+       103	       154	     11774	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+       104	       145	     10879	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       105	        19	     16552	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       106	       149	     12902	    1	      0	             [Loop@0x403250 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	66	12946	16	0	0	0	0	0	0	0	0
+       107	       154	     11763	    1	      0	             [Loop@0x402ddc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	62	11802	18	0	0	0	0	0	0	0	0
+       108	       153	     11708	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	19	0	0	0	0	0	0	0	0
+       109	       145	     15492	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       110	       146	     15208	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+       111	       238	      8829	    1	      0	             [Loop@0x4021d6 in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	8662	183	8845	31	0	0	0	0	0	0	0	0
+       112	       167	      6580	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	20	0	0	0	0	0	0	0	0
+       113	       167	      6620	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	20	0	0	0	0	0	0	0	0
+       114	       167	      6830	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	20	0	0	0	0	0	0	0	0
+       115	       167	      6742	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	20	0	0	0	0	0	0	0	0
+       116	       238	      8685	    1	      0	             [Loop@0x4021d6 in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	8662	183	8845	31	0	0	0	0	0	0	0	0
+       117	       167	      6404	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	20	0	0	0	0	0	0	0	0
+       118	       167	      6816	    1	      0	             [Loop@0x4018fd in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	491	6888	20	0	0	0	0	0	0	0	0
+       119	       148	     12853	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
+       120	       145	     10805	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       121	       145	     11974	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       122	       146	     15144	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+       123	       146	     15158	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+       124	       146	     15119	    1	      0	             [Loop@0x403ad2 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	292	15350	10	0	0	0	0	0	0	0	0
+       125	       153	     11826	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	19	0	0	0	0	0	0	0	0
+       126	       213	     14866	    1	      0	             [Loop@0x4039e8 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14824	63	14887	29	0	0	0	0	0	0	0	0
+       127	       148	     12964	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
+       128	       203	     14111	    1	      0	             [Loop@0x4036ee in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14062	58	14120	25	0	0	0	0	0	0	0	0
+       129	       257	     13433	    1	      0	             [Loop@0x403453 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	13395	43	13438	32	0	0	0	0	0	0	0	0
+       130	       144	     10241	    1	      0	             [Loop@0x4027d6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10198	5824	16581,16476,16541,16533,16518,16503,16495,16484,16022	13	0	0	0	0	0	0	0	0
+       131	       130	     29379	    0	      0	                  __intel_avx_rep_memset	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	28736	4304	0	33	0	0	0	0	0	0	0	0
+       132	       189	     15697	    1	      0	             [Loop@0x403d1e in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15646	185	15831	24	0	0	0	0	0	0	0	0
+       133	       145	     15478	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       134	       203	     14068	    1	      0	             [Loop@0x4036ee in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14062	58	14120	25	0	0	0	0	0	0	0	0
+       135	        14	     75403	    0	      1	                            func@0x12680	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	75392	32	0	28	0	0	0	0	0	0	0	0
+       136	        14	     75407	    0	      1	                            func@0x12680	/apps/intel-oneapi/advisor/2022.1.0/lib64/runtime/libittnotify_collector.so	75392	32	0	28	0	0	0	0	0	0	0	0
+       137	         3	    240740	    0	      1	                       __libc_start_main	/lib64/libc.so.6	240640	446	0	5	0	0	0	0	0	0	0	0
+       138	         3	    240882	    0	      1	                       __libc_start_main	/lib64/libc.so.6	240640	446	0	5	0	0	0	0	0	0	0	0
+       139	        85	    601416	    0	      1	                          _IO_file_write	/lib64/libc.so.6	601376	156	0	38	0	0	0	0	0	0	0	0
+       140	        85	    601420	    0	      1	                          _IO_file_write	/lib64/libc.so.6	601376	156	0	38	0	0	0	0	0	0	0	0
+       141	         4	     18827	    0	      0	                                    main	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18064	1072	0	4	0	0	0	0	0	0	0	0
+       142	         4	     18994	    0	      0	                                    main	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18064	1072	0	4	0	0	0	0	0	0	0	0
+       143	        19	     10038	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       144	       143	     10198	    1	      0	             [Loop@0x402736 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10038	6063	16101,16581,16476,16541,16533,16518,16503,16495,16484,16101	14	0	0	0	0	0	0	0	0
+       145	       144	     10742	    1	      0	             [Loop@0x4027d6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10198	5824	16581,16476,16541,16533,16518,16503,16495,16484,16022	13	0	0	0	0	0	0	0	0
+       146	       145	     15058	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       147	        19	     15317	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       148	       145	     12022	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
        149	       148	     12880	    1	      0	             [Loop@0x402ef6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	976	16541,16533,12998	17	0	0	0	0	0	0	0	0
-       150	        26	     12918	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       151	        26	     10899	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       152	       147	     15058	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       153	        26	     15323	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       154	        26	     12980	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       155	       147	     10956	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       156	       155	     11740	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	28	0	0	0	0	0	0	0	0
-       157	        26	     11786	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       158	        26	     15201	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       159	        26	     15208	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       160	        26	     11766	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       161	        26	     15317	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       162	        26	     15194	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       163	        25	      6184	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       164	       163	      6255	    1	      0	             [Loop@0x401828 in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6184	1497	7681	32	0	0	0	0	0	0	0	0
-       165	       164	      6397	    1	      0	             [Loop@0x40186f in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6255	1383	7638	31	0	0	0	0	0	0	0	0
-       166	        25	      6760	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       167	        26	     15287	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       168	        26	     15341	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       169	        26	     15072	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       170	        26	     11756	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       171	        26	     15233	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       172	        26	     15311	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       173	        26	     12880	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       174	        26	     15281	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       175	        26	     15257	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       176	        26	     15305	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       177	        26	     15188	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       178	        26	     15263	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       179	        26	     15436	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       180	        26	     11740	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       181	        26	     12886	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       182	       147	     14824	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       183	        26	     14866	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       184	        26	     12924	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       185	        26	     12039	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       186	        26	     12909	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       187	       147	     14062	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       188	        26	     14086	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       189	        26	     14151	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       190	        26	     12900	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       191	        26	     12829	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       192	        26	     13389	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       193	        26	     15093	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       194	        26	     11826	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       195	        25	      6736	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       196	        26	     14879	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       197	        26	     14104	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       198	        26	     11780	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       199	        26	     15181	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       200	        26	     15133	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       201	        26	     15450	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       202	        25	      8662	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       203	        25	      8725	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       204	        26	     12897	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       205	       147	     15646	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	18	0	0	0	0	0	0	0	0
-       206	        26	     15767	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       207	        26	     12964	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       208	        26	     15151	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       209	        26	     11758	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       210	        26	     15174	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       211	        25	      8829	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       212	        26	     12035	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       213	        26	     15367	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       214	        26	     15112	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       215	        26	     15269	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       216	        26	     11774	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       217	        26	     15513	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       218	        26	     11750	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       219	        26	     14914	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       220	        25	      6816	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       221	        26	     14126	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       222	        26	     12859	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       223	        26	     15119	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       224	        26	     15098	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       225	        26	     15408	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       226	        25	      6437	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       227	        26	     15492	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       228	        26	     14846	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       229	        26	     11813	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       230	        26	     15245	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       231	        26	     12930	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       232	        25	      6772	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       233	        26	     14808	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       234	        26	     12853	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       235	        26	     12912	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       236	        26	     15786	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       237	        26	     15275	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       238	        26	     12941	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       239	        26	     10819	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       240	        26	     14860	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       241	        25	      6604	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       242	        26	     14098	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       243	        26	     15124	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       244	        26	     10835	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       245	        25	      6598	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       246	        26	     15335	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       247	        26	     12992	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       248	        26	     12946	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       249	        26	     11746	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       250	        26	     15226	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       251	        26	     15251	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       252	        26	     11797	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       253	        25	      6742	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       254	        26	     15144	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       255	        26	     15527	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       256	        26	     10922	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       257	        26	     15860	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       258	        25	      8813	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       259	        26	     15214	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       260	        26	     11725	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       261	        26	     11708	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       262	        26	     10866	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       263	        26	     11768	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       264	        25	      8837	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	11	0	0	0	0	0	0	0	0
-       265	        26	     12015	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       266	        26	     11974	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	16	0	0	0	0	0	0	0	0
-       267	         6	    800662	    0	      1	          __kmp_get_global_thread_id_reg	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	800640	192	0	39	0	0	0	0	0	0	0	0
-       268	         6	    800681	    0	      1	          __kmp_get_global_thread_id_reg	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	800640	192	0	39	0	0	0	0	0	0	0	0
-       269	         7	    766273	    0	      1	               __kmp_acquire_ticket_lock	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	766272	576	0	41	0	0	0	0	0	0	0	0
-       270	         7	    766334	    0	      1	               __kmp_acquire_ticket_lock	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	766272	576	0	41	0	0	0	0	0	0	0	0
-       271	        -1	         0	    0	      0	                [Unknown stack frame(s)]	n/a	0	0	0	6287	0	0	0	0	0	0	0	0
+       150	        19	     12912	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       151	        19	     15341	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       152	        19	     15201	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       153	       145	     10956	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       154	       153	     11740	    1	      0	             [Loop@0x402acc in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	883	16581,16476,11839	19	0	0	0	0	0	0	0	0
+       155	        19	     11753	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       156	        19	     11756	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       157	        19	     12924	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       158	        19	     15311	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       159	        19	     14151	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       160	        19	     12897	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       161	        19	     15257	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       162	        19	     15335	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       163	        19	     12941	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       164	        19	     11802	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       165	        18	      6184	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       166	       165	      6255	    1	      0	             [Loop@0x401828 in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6184	1497	7681	22	0	0	0	0	0	0	0	0
+       167	       166	      6397	    1	      0	             [Loop@0x40186f in loopcode]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6255	1383	7638	21	0	0	0	0	0	0	0	0
+       168	        18	      6604	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       169	        19	     15323	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       170	        19	     11780	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       171	        19	     12880	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       172	        19	     12930	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       173	        19	     12900	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       174	        19	     11721	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       175	        19	     11797	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       176	        19	     15471	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       177	        19	     15450	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       178	        19	     11766	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       179	        19	     15098	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       180	        19	     11758	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       181	        19	     15305	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       182	        19	     15281	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       183	        19	     15251	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       184	        19	     15269	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       185	        19	     11786	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       186	        19	     15167	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       187	        19	     11829	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       188	        19	     10968	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       189	       145	     15646	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       190	        19	     15650	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       191	        19	     15174	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       192	        19	     15181	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       193	        18	      6703	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       194	        19	     15287	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       195	        19	     15072	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       196	        19	     10922	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       197	        19	     12909	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       198	        19	     15058	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       199	        19	     11740	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       200	        19	     15263	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       201	        19	     12982	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       202	        19	     15124	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       203	       145	     14062	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       204	        19	     14086	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       205	        19	     15105	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       206	        18	      6476	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       207	        19	     12992	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       208	        19	     15133	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       209	        19	     11917	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       210	        19	     12039	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       211	        19	     14971	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       212	        19	     11768	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       213	       145	     14824	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       214	        19	     14860	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       215	        19	     15737	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       216	         4	     19033	    0	      0	                                    main	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18064	1072	0	4	0	0	0	0	0	0	0	0
+       217	        19	     15299	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       218	        19	     15112	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       219	        19	     15239	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       220	        19	     14834	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       221	        19	     15214	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       222	        19	     15275	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       223	        19	     10803	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       224	        19	     15527	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       225	        19	     15151	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       226	        19	     12893	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       227	        19	     15233	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       228	        19	     15188	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       229	        18	      6754	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       230	        19	     10972	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       231	        19	     11774	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       232	        19	     10879	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       233	        19	     12902	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       234	        19	     11763	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       235	        19	     11708	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       236	        19	     15492	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       237	        19	     15208	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       238	        18	      8662	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       239	        18	      8829	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       240	        18	      6580	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       241	        18	      6620	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       242	        18	      6830	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       243	        18	      6742	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       244	        18	      8685	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       245	        18	      6404	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       246	        18	      6816	    0	      0	                                loopcode	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	5488	3888	0	7	0	0	0	0	0	0	0	0
+       247	        19	     12853	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       248	        19	     10805	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       249	        19	     11974	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       250	        19	     15144	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       251	        19	     15158	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       252	        19	     15119	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       253	        19	     11826	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       254	        19	     14866	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       255	        19	     12964	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       256	        19	     14111	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       257	       145	     13395	    1	      0	             [Loop@0x4029f6 in eval_pef]	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	5141	16581,16476,16541,16533,16518,16503,16495,16484,15883	12	0	0	0	0	0	0	0	0
+       258	        19	     13433	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       259	        19	     10241	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       260	        19	     15697	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       261	        19	     15478	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       262	        19	     14068	    0	      0	                                eval_pef	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	9376	7248	0	11	0	0	0	0	0	0	0	0
+       263	         6	    800662	    0	      1	          __kmp_get_global_thread_id_reg	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	800640	192	0	42	0	0	0	0	0	0	0	0
+       264	         6	    800681	    0	      1	          __kmp_get_global_thread_id_reg	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	800640	192	0	42	0	0	0	0	0	0	0	0
+       265	         7	    766273	    0	      1	               __kmp_acquire_ticket_lock	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	766272	576	0	44	0	0	0	0	0	0	0	0
+       266	         7	    766334	    0	      1	               __kmp_acquire_ticket_lock	/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so	766272	576	0	44	0	0	0	0	0	0	0	0
+       267	        -1	         0	    0	      0	                [Unknown stack frame(s)]	n/a	0	0	0	6290	0	0	0	0	0	0	0	0
