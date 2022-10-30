@@ -1,18 +1,32 @@
 # hash file version: 3
-1	6	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	18827	19050		0	223	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-2	16	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12880	12946		0	66	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-3	17	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	12022	16541,16533,12998		0	976	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-4	12	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10742	16581,16476,16541,16533,16518,16503,16495,16484,15883		0	5141	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-5	13	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10198	16581,16476,16541,16533,16518,16503,16495,16484,16022		0	5824	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-6	14	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10038	16101,16581,16476,16541,16533,16518,16503,16495,16484,16101		0	6063	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-7	10	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15058	15350		0	292	1c75fa8c57738660ac380fcf96488ba5	1	1	0	0	0
-8	18	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	11740	11802		0	62	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-9	19	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	10956	16581,16476,11839		0	883	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-10	20	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6397	6888		0	491	1c75fa8c57738660ac380fcf96488ba5	1	1	0	0	0
-11	21	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6255	7638		0	1383	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-12	22	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	6184	7681		0	1497	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-13	29	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14824	14887		0	63	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-14	25	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	14062	14120		0	58	1c75fa8c57738660ac380fcf96488ba5	1	1	0	0	0
-15	31	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	8662	8845		0	183	1c75fa8c57738660ac380fcf96488ba5	1	1	0	0	0
-16	24	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	15646	15831		0	185	1c75fa8c57738660ac380fcf96488ba5	0	1	0	0	0
-17	32	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_mp	13395	13438		0	43	1c75fa8c57738660ac380fcf96488ba5	1	1	0	0	0
+1	7	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	5611	5834	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main_mp.cpp	106	223	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+2	11	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	17702	17990	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	375	288	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+3	14	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	13639	19259,19139,19225,19217,19202,19177,19169,19147,18543	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	335	4904	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+4	15	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	13128	19259,19139,19225,19217,19202,19177,19169,19147,18707	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	327	5579	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+5	16	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	12935	18764,19259,19139,19225,19217,19202,19177,19169,19147,18764	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	326	5829	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+6	21	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	15594	15652	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	350	58	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+7	22	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	14841	19225,19217,15696	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	349	855	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+8	23	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	8503	9058	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	221	555	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+9	25	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	7593	9099	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	109	1506	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+10	27	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	7505	9153	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	108	1648	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+11	29	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	14580	14637	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	342	57	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+12	31	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	13852	19259,19139,14672	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	341	820	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+13	32	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	17448	17502	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	364	54	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+14	34	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	16703	16755	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	359	52	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+15	44	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	7698	8158	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	110	460	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+16	48	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	18329	18493	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	415	164	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+17	60	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	14064		/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	342	71	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+18	61	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	14306		/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	342	224	984c2651e2dc291e8fdde3c93472e03d	1	4	0	0	0
+19	62	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	15056		/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	350	71	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+20	63	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	15311		/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	350	224	984c2651e2dc291e8fdde3c93472e03d	1	4	0	0	0
+21	64	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	15860		/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	359	34	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+22	65	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	15975		/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	359	32	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+23	67	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	16090		/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	359	38	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+24	68	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	16296	16348	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	359	52	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+25	69	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	16445		/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	359	150	984c2651e2dc291e8fdde3c93472e03d	1	4	0	0	0
+26	70	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	16960		/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	364	65	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+27	71	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	17187		/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	364	205	984c2651e2dc291e8fdde3c93472e03d	1	4	0	0	0
+28	6321	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	14064	14135,14530,14637	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	342	352	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+29	6322	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	15056	15127,15535,15652	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	350	353	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0
+30	6323	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	15860	15894,16007,16128,16348,16595,16755	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	359	358	984c2651e2dc291e8fdde3c93472e03d	1	1	0	0	0
+31	6324	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/kernel_omp	16960	17025,17392,17502	/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_sse_mp.cpp	364	324	984c2651e2dc291e8fdde3c93472e03d	0	1	0	0	0

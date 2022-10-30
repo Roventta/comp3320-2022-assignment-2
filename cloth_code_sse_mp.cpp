@@ -84,10 +84,10 @@ void initMatrix(int n, double UNUSED(mass), double UNUSED(fcon),
 
 void loopcode(int n, double mass, double fcon, int delta, double grav,
               double sep, double rball, double xball, double yball,
-              double zball, double dt, double *x, double *y, double *z,
-              double *fx, double *fy, double *fz, double *vx, double *vy,
-              double *vz, double *oldfx, double *oldfy, double *oldfz,
-              double *pe, double *ke, double *te) {
+              double zball, double dt, double * __restrict__ x, double * __restrict__ y, double * __restrict__ z,
+              double * __restrict__ fx, double * __restrict__ fy, double * __restrict__ fz, double * __restrict__ vx, double * __restrict__ vy,
+              double * __restrict__ vz, double * __restrict__ oldfx, double * __restrict__ oldfy, double * __restrict__ oldfz,
+              double * __restrict__ pe, double * __restrict__ ke, double * __restrict__ te) {
   //_assume_aligned(var, 32);
 
   int chunk_size = n/omp_get_num_threads();
@@ -311,8 +311,8 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
 }
 
 double eval_pef(int n, int delta, double mass, double grav, double sep,
-                double fcon, double *x, double *y, double *z, double *fx,
-                double *fy, double *fz) {
+                double fcon, double * __restrict__ x, double * __restrict__ y, double * __restrict__ z, double * __restrict__ fx,
+                double * __restrict__ fy, double * __restrict__ fz) {
 double  xdiff, ydiff, zdiff, vmag;
   int nx, ny, dx, dy;
 

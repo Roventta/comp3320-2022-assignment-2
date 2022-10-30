@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/apps/cmake/3.21.4/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/half-root/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -323,7 +323,6 @@ kernel_main.o: kernel_main.cpp.o
 # target to build an object file
 kernel_main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_main.dir/build.make CMakeFiles/kernel_main.dir/kernel_main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_opt.dir/build.make CMakeFiles/kernel_opt.dir/kernel_main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_sse.dir/build.make CMakeFiles/kernel_sse.dir/kernel_main.cpp.o
 .PHONY : kernel_main.cpp.o
@@ -334,7 +333,6 @@ kernel_main.i: kernel_main.cpp.i
 # target to preprocess a source file
 kernel_main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_main.dir/build.make CMakeFiles/kernel_main.dir/kernel_main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_opt.dir/build.make CMakeFiles/kernel_opt.dir/kernel_main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_sse.dir/build.make CMakeFiles/kernel_sse.dir/kernel_main.cpp.i
 .PHONY : kernel_main.cpp.i
@@ -345,7 +343,6 @@ kernel_main.s: kernel_main.cpp.s
 # target to generate assembly for a file
 kernel_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_main.dir/build.make CMakeFiles/kernel_main.dir/kernel_main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_opt.dir/build.make CMakeFiles/kernel_opt.dir/kernel_main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_sse.dir/build.make CMakeFiles/kernel_sse.dir/kernel_main.cpp.s
 .PHONY : kernel_main.cpp.s
@@ -373,6 +370,30 @@ kernel_main_mp.s: kernel_main_mp.cpp.s
 kernel_main_mp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_omp.dir/build.make CMakeFiles/kernel_omp.dir/kernel_main_mp.cpp.s
 .PHONY : kernel_main_mp.cpp.s
+
+kernel_main_vect_mp.o: kernel_main_vect_mp.cpp.o
+.PHONY : kernel_main_vect_mp.o
+
+# target to build an object file
+kernel_main_vect_mp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o
+.PHONY : kernel_main_vect_mp.cpp.o
+
+kernel_main_vect_mp.i: kernel_main_vect_mp.cpp.i
+.PHONY : kernel_main_vect_mp.i
+
+# target to preprocess a source file
+kernel_main_vect_mp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.i
+.PHONY : kernel_main_vect_mp.cpp.i
+
+kernel_main_vect_mp.s: kernel_main_vect_mp.cpp.s
+.PHONY : kernel_main_vect_mp.s
+
+# target to generate assembly for a file
+kernel_main_vect_mp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel_vect_omp.dir/build.make CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.s
+.PHONY : kernel_main_vect_mp.cpp.s
 
 opengl_main.o: opengl_main.cpp.o
 .PHONY : opengl_main.o
@@ -433,6 +454,9 @@ help:
 	@echo "... kernel_main_mp.o"
 	@echo "... kernel_main_mp.i"
 	@echo "... kernel_main_mp.s"
+	@echo "... kernel_main_vect_mp.o"
+	@echo "... kernel_main_vect_mp.i"
+	@echo "... kernel_main_vect_mp.s"
 	@echo "... opengl_main.o"
 	@echo "... opengl_main.i"
 	@echo "... opengl_main.s"

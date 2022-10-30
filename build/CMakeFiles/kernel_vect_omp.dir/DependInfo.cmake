@@ -9,7 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/cloth_code_mp.cpp" "CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.o" "gcc" "CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.o.d"
-  "/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp" "CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o" "gcc" "CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o.d"
+  "/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main_vect_mp.cpp" "CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o" "gcc" "CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o.d"
   )
 
 # Targets to which this target links.

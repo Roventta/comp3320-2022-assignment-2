@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -g    -qopt-report=5 -qopt-report-phase=vec -qopt-report-file=stdout -O2 -g -DNDEBUG -fopenmp
+CXX_FLAGS =  -g    -qopt-report=5 -qopt-report-phase=vec -qopt-report-file=stdout -O2 -g -DNDEBUG -fopenmp -qopenmp
 

@@ -72,7 +72,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/apps/intel-ct/2021.6.0/compiler/linux/include;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/include/intel64;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/include/icc;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/include;/usr/local/include;/half-root/usr/lib/gcc/x86_64-redhat-linux/8/include;/half-root/usr/include;/usr/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/apps/intel-ct/2021.6.0/compiler/linux/include;/apps/papi/5.7.0/include;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/include/intel64;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/include/icc;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/include;/usr/local/include;/half-root/usr/lib/gcc/x86_64-redhat-linux/8/include;/half-root/usr/include;/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "imf;svml;irng;m;ipgo;decimal;cilkrts;stdc++;gcc;gcc_s;irc;svml;c;gcc;gcc_s;irc_s;dl;c")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin;/apps/intel-ct/2021.6.0/compiler/linux/lib/x64;/apps/intel-ct/2021.6.0/compiler/linux/lib;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/lib/intel64_lin;/half-root/usr/lib/gcc/x86_64-redhat-linux/8;/half-root/usr/lib/gcc;/half-root/usr/lib64;/lib64;/usr/lib64;/half-root/usr/lib;/lib;/usr/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin;/apps/intel-ct/2021.6.0/compiler/linux/lib/x64;/apps/intel-ct/2021.6.0/compiler/linux/lib;/apps/papi/5.7.0/lib;/apps/intel-oneapi/compiler/2022.1.0/linux/compiler/lib/intel64_lin;/half-root/usr/lib/gcc/x86_64-redhat-linux/8;/half-root/usr/lib/gcc;/half-root/usr/lib64;/lib64;/usr/lib64;/half-root/usr/lib;/lib;/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

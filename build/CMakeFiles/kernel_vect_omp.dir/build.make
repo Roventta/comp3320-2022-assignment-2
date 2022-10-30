@@ -69,19 +69,19 @@ include CMakeFiles/kernel_vect_omp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/kernel_vect_omp.dir/flags.make
 
-CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o: CMakeFiles/kernel_vect_omp.dir/flags.make
-CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o: ../kernel_main.cpp
-CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o: CMakeFiles/kernel_vect_omp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o"
-	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o -MF CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o.d -o CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o -c /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp
+CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o: CMakeFiles/kernel_vect_omp.dir/flags.make
+CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o: ../kernel_main_vect_mp.cpp
+CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o: CMakeFiles/kernel_vect_omp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o"
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o -MF CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o.d -o CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o -c /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main_vect_mp.cpp
 
-CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.i"
-	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp > CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.i
+CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.i"
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main_vect_mp.cpp > CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.i
 
-CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.s"
-	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main.cpp -o CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.s
+CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.s"
+	/apps/intel-ct/wrapper/icpc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/198/hz6100/COMP3320/comp3320-2022-assignment-2/kernel_main_vect_mp.cpp -o CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.s
 
 CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.o: CMakeFiles/kernel_vect_omp.dir/flags.make
 CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.o: ../cloth_code_mp.cpp
@@ -99,15 +99,17 @@ CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.s: cmake_force
 
 # Object files for target kernel_vect_omp
 kernel_vect_omp_OBJECTS = \
-"CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o" \
+"CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o" \
 "CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.o"
 
 # External object files for target kernel_vect_omp
 kernel_vect_omp_EXTERNAL_OBJECTS =
 
-kernel_vect_omp: CMakeFiles/kernel_vect_omp.dir/kernel_main.cpp.o
+kernel_vect_omp: CMakeFiles/kernel_vect_omp.dir/kernel_main_vect_mp.cpp.o
 kernel_vect_omp: CMakeFiles/kernel_vect_omp.dir/cloth_code_mp.cpp.o
 kernel_vect_omp: CMakeFiles/kernel_vect_omp.dir/build.make
+kernel_vect_omp: /apps/intel-ct/2021.6.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so
+kernel_vect_omp: /half-root/usr/lib64/libpthread.so
 kernel_vect_omp: CMakeFiles/kernel_vect_omp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/198/hz6100/COMP3320/comp3320-2022-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable kernel_vect_omp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kernel_vect_omp.dir/link.txt --verbose=$(VERBOSE)

@@ -77,17 +77,17 @@ void initMatrix(int n, double UNUSED(mass), double UNUSED(fcon),
 
 void loopcode(int n, double mass, double fcon, int delta, double grav,
               double sep, double rball, double xball, double yball,
-              double zball, double dt, double *x, double *y, double *z,
-              double *fx, double *fy, double *fz, double *vx, double *vy,
-              double *vz, double *oldfx, double *oldfy, double *oldfz,
-              double *pe, double *ke, double *te) {
+              double zball, double dt, double* __restrict__ x, double* __restrict__ y, double * __restrict__ z,
+              double * __restrict__ fx, double * __restrict__ fy, double * __restrict__ fz, double *__restrict__ vx, double * __restrict__ vy,
+              double * __restrict__ vz, double * __restrict__ oldfx, double * __restrict__ oldfy, double *__restrict__ oldfz,
+              double * __restrict__ pe, double * __restrict__ ke, double *__restrict__ te) {
   int i, j;
   double xdiff, ydiff, zdiff, vmag, damp;
 
 
   // update position as per MD simulation
   for (j = 0; j < n; j++) {
-#pragma omp simd
+#pragma omp for
     for (i = 0; i < n; i++) {
       x[j * n + i] += dt * (vx[j * n + i] + dt * fx[j * n + i] * 0.5 / mass);
       oldfx[j * n + i] = fx[j * n + i];
@@ -126,8 +126,9 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
   // Add a damping factor to eventually set velocity to zero
   damp = 0.995;
   *ke = 0.0;
-  double KE = 0.0;
-	#pragma omp simd
+  static double KE;
+  KE = 0;
+	#pragma omp for reduction(+: KE)
   for (j = 0; j < n; j++) {
 	{  
 	  for (int i = 0; i < n; i++) {
@@ -150,18 +151,19 @@ void loopcode(int n, double mass, double fcon, int delta, double grav,
 }
 
 double eval_pef(int n, int delta, double mass, double grav, double sep,
-                double fcon, double *x, double *y, double *z, double *fx,
-                double *fy, double *fz) {
-  double pe, xdiff, ydiff, zdiff, vmag;
+                double fcon, double * __restrict__ x, double * __restrict__ y, double* __restrict__ z, double* __restrict__ fx,
+                double* __restrict__ fy, double* __restrict__ fz) {
+  double  xdiff, ydiff, zdiff, vmag;
   int nx, ny, dx, dy;
 
   int adjacents[1+4*delta*delta+4*delta] = {0};
   double rlen[1+4*delta*delta+4*delta] = {0};
 
+  static double pe;
   pe = 0.0;
   // loop over particles
   for (nx = 0; nx < n; nx++) {
-    #pragma omp simd reduction(+: pe)
+    #pragma omp for reduction(+: pe)
     for (ny = 0; ny < n; ny++) {
       fx[nx * n + ny] = 0.0;
       fy[nx * n + ny] = 0.0;
